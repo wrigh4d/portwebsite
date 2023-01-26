@@ -21,7 +21,7 @@ const Main = () => {
 							src={square}
 							alt=""
 							style={{
-								width: "400px",
+								maxWidth: "400px",
 								boxShadow:
 									" 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
 								borderRadius: "100%",
@@ -33,7 +33,7 @@ const Main = () => {
 							<Typography variant="h3">
 								Student at Central Michigan University
 							</Typography>
-							<Typography variant="p">
+							<Typography variant="p" style={{fontSize: "1.5rem"}}>
 								Major: Computer Science, Minor: Multimedia Design
 							</Typography>
 							<br />

@@ -1,11 +1,11 @@
 import React from "react";
 
 // Import Images
-import square1 from "../images/projects1.jpg";
-import square2 from "../images/projects2.jpg";
-import square3 from "../images/projects3.jpg";
-import square4 from "../images/projects4.jpg";
-import square5 from "../images/projects5.jpg";
+import square1 from "../images/projects1mobile.jpg";
+import square2 from "../images/projects1mobile.jpg";
+import square3 from "../images/projects1mobile.jpg";
+import square4 from "../images/projects1mobile.jpg";
+import square5 from "../images/projects1mobile.jpg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,22 +17,19 @@ import "swiper/css/navigation";
 import "../index.css";
 
 // import required modules
-import { Keyboard, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
-const Carousel = () => {
+const MobileCarousel = () => {
 	return (
 		<>
 			<Swiper
 				slidesPerView={1}
 				spaceBetween={30}
-				keyboard={{
-					enabled: true,
-				}}
 				pagination={{
 					clickable: true,
 				}}
 				navigation={true}
-				modules={[Keyboard, Pagination, Navigation]}
+				modules={[Pagination, Navigation]}
 				className="mySwiper"
 			>
 				<SwiperSlide>
