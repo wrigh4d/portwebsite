@@ -69,3 +69,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # portwebsite
+
+This section is for future animation integration:
+
+import useEffect
+import motion, { useAnimation } from "framer-motion";
+To do scrolling animations - import { useInView } from 'react-intersection-observer';
+const {ref, inView} = useInView({0.2});
+ref={ref} in parent div
+useEffect(() => { if(inView) { animation.start({ x: 0, transition: {type: "spring", duration: 1, bounce: 0.3}});} if(!inView) {animation.start({ x: "-100vw"})}}, [inView]);
+const animation = useAnimation();
+motion. div animate={animation}

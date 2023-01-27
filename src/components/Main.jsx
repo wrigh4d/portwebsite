@@ -8,6 +8,7 @@ import { Button, ButtonGroup, Typography } from "@mui/material";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
@@ -40,8 +41,30 @@ const Main = () => {
 		<>
 			<ThemeProvider theme={theme}>
 				<MainStyles id="home">
-					<img src={square} alt="" className="headshot" />
-					<div className="header">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							default: {
+								duration: 0.3,
+								ease: [0, 0.71, 0.2, 1.01],
+							},
+							scale: {
+								type: "spring",
+								damping: 5,
+								stiffness: 100,
+								restDelta: 0.001,
+							},
+						}}
+					>
+						<img src={square} alt="" className="headshot" />
+					</motion.div>
+					<motion.div
+						className="header"
+						initial={{ x: "-100vw" }}
+						animate={{ x: 0 }}
+						transition={{ type: "spring", duration: 1, bounce: 0.3 }}
+					>
 						<Typography variant="h1">Nick Wright</Typography>
 						<Typography variant="h3">
 							Student at Central Michigan University
@@ -49,33 +72,39 @@ const Main = () => {
 						<Typography variant="p">
 							Major: Computer Science, Minor: Multimedia Design
 						</Typography>
-					</div>
-					<ButtonGroup
-						variant="text"
-						aria-label="text button group"
-						sx={{
-							margin: "10px",
-						}}
+					</motion.div>
+					<motion.div
+						initial={{ x: "100vw" }}
+						animate={{ x: 0 }}
+						transition={{ type: "spring", duration: 1, bounce: 0.3 }}
 					>
-						<Button
-							variant="contained"
-							type="submit"
-							href="#contact"
-							sx={{ backgroundColor: "black" }}
+						<ButtonGroup
+							variant="text"
+							aria-label="text button group"
+							sx={{
+								margin: "20px",
+							}}
 						>
-							Contact Me
-						</Button>
-						<Button
-							variant="contained"
-							href="../images/resume.pdf"
-							download
-							sx={{ backgroundColor: "black" }}
+							<Button
+								variant="contained"
+								type="submit"
+								href="#contact"
+								sx={{ backgroundColor: "black" }}
+							>
+								Contact Me
+							</Button>
+							<Button
+								variant="contained"
+								href="../images/resume.pdf"
+								download
+								sx={{ backgroundColor: "black" }}
 
-							// endIcon={}
-						>
-							Download Resume
-						</Button>
-					</ButtonGroup>
+								// endIcon={}
+							>
+								Download Resume
+							</Button>
+						</ButtonGroup>
+					</motion.div>
 				</MainStyles>
 			</ThemeProvider>
 		</>
