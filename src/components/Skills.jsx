@@ -2,9 +2,11 @@ import React from "react";
 
 // Import Components
 import AboutInfoItem from "./AboutInfoItem";
+import square from "../images/headshot.jpg";
 
 // Import MUI
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
 import { Typography } from "@mui/material";
 
@@ -12,9 +14,10 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const SkillsStyles = styled.div`
-	padding: 0 10rem;
-	.about__info__items {
-		margin-top: 10rem;
+	padding: 4rem 10rem;
+	.header {
+		padding: 2rem;
+		text-align: center;
 	}
 	.about__info__item {
 		margin-bottom: 8rem;
@@ -23,10 +26,18 @@ const SkillsStyles = styled.div`
 		margin: 0;
 		font-size: 3.6rem;
 	}
+	.about__info__content {
+		display: flex;
+		justify-content: space-between;
+	}
 	@media only screen and (max-width: 768px) {
 		padding: 0 1rem;
 		.about__info__heading {
 			font-size: 3rem;
+		}
+		.about__info__content {
+			display: flex;
+			justify-content: center;
 		}
 	}
 `;
@@ -34,21 +45,21 @@ const SkillsStyles = styled.div`
 const Skills = () => {
 	return (
 		<>
-			<SkillsStyles>
-				<div className="container">
+			<ThemeProvider theme={theme}>
+				<SkillsStyles>
 					<section id="skills" className="about__info__items">
-						<Typography
-							variant="h1"
-							style={{ textAlign: "center", paddingBottom: "2rem" }}
-						>
-							ABOUT ME
-						</Typography>
+						<div className="header">
+							<Typography variant="h1">SKILLS & EXPERIENCE</Typography>
+							<Typography variant="h5">-SCROLL THROUGH MY INFO-</Typography>
+						</div>
 						<div className="about__info__item">
 							<h1 className="about__info__heading">EDUCATION</h1>
+
 							<AboutInfoItem
 								title="SCHOOL"
 								items={["Mason High School, Mason MI"]}
 							/>
+
 							<AboutInfoItem
 								title="COLLEGE"
 								items={["Central Michigan University, Mount Pleasant MI"]}
@@ -89,8 +100,8 @@ const Skills = () => {
 							/>
 						</div>
 					</section>
-				</div>
-			</SkillsStyles>
+				</SkillsStyles>
+			</ThemeProvider>
 		</>
 	);
 };

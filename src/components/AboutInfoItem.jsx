@@ -6,7 +6,7 @@ const AboutItemStyles = styled.div`
 	align-items: center;
 	justify-content: flex-start;
 	margin-top: 1rem;
-    position: relative;
+	position: relative;
 	.title {
 		font-size: 2.4rem;
 	}
@@ -18,7 +18,7 @@ const AboutItemStyles = styled.div`
 	}
 	.item {
 		background-color: #2a2a2a;
-		padding: .9rem;
+		padding: 0.9rem;
 		border-radius: 8px;
 	}
 	@media only screen and (max-width: 768px) {
@@ -26,6 +26,8 @@ const AboutItemStyles = styled.div`
 		align-items: flex-start;
 		gap: 1rem;
 		.items {
+			display: flex;
+			flex-wrap: wrap;
 			position: initial;
 			gap: 1rem;
 		}
