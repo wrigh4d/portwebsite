@@ -14,7 +14,8 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const ContactStyles = styled.div`
-	padding: 4rem 0;
+	padding-top: 5rem;
+	padding-bottom: 10rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -41,7 +42,9 @@ const ContactStyles = styled.div`
 		background-color: #000;
 	}
 	@media only screen and (max-width: 768px) {
-		padding: 1rem;
+		padding: 0 1rem;
+		padding-top: 5rem;
+		padding-bottom: 10rem;
 	}
 `;
 

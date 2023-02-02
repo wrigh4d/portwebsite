@@ -24,7 +24,7 @@ const AboutItemStyles = styled.div`
 	@media only screen and (max-width: 768px) {
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 1rem;
+		gap: .8rem;
 		.items {
 			display: flex;
 			flex-wrap: wrap;
@@ -32,7 +32,7 @@ const AboutItemStyles = styled.div`
 			gap: 1rem;
 		}
 		.title {
-			font-size: 2rem;
+			font-size: 1.8rem;
 		}
 	}
 `;

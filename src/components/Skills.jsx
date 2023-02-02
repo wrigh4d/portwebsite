@@ -14,7 +14,7 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const SkillsStyles = styled.div`
-	padding: 4rem 10rem;
+	padding: 5rem 8rem;
 	.header {
 		padding: 2rem;
 		text-align: center;
@@ -31,9 +31,12 @@ const SkillsStyles = styled.div`
 		justify-content: space-between;
 	}
 	@media only screen and (max-width: 768px) {
-		padding: 0 1rem;
+		padding: 1rem 1rem;
+		.about__info__item {
+			margin-bottom: 2.5rem;
+		}
 		.about__info__heading {
-			font-size: 3rem;
+			font-size: 2.6rem;
 		}
 		.about__info__content {
 			display: flex;
@@ -46,14 +49,16 @@ const Skills = () => {
 	return (
 		<>
 			<ThemeProvider theme={theme}>
-				<SkillsStyles>
-					<section id="skills" className="about__info__items">
+				<SkillsStyles id="skills">
+					<section className="about__info__items">
 						<div className="header">
 							<Typography variant="h1">SKILLS & EXPERIENCE</Typography>
 							<Typography variant="h5">-SCROLL THROUGH MY INFO-</Typography>
 						</div>
 						<div className="about__info__item">
-							<h1 className="about__info__heading">EDUCATION</h1>
+							<Typography variant="h6" className="about__info__heading">
+								EDUCATION
+							</Typography>
 
 							<AboutInfoItem
 								title="SCHOOL"
@@ -66,7 +71,10 @@ const Skills = () => {
 							/>
 						</div>
 						<div className="about__info__item">
-							<h1 className="about__info__heading">MY SKILLS</h1>
+							<Typography variant="h6" className="about__info__heading">
+								MY SKILLS
+							</Typography>
+
 							<AboutInfoItem
 								title="FRONTEND"
 								items={["HTML", "CSS", "JS", "REACT"]}
@@ -81,7 +89,10 @@ const Skills = () => {
 							/>
 						</div>
 						<div className="about__info__item">
-							<h1 className="about__info__heading">EXPERIENCE</h1>
+							<Typography variant="h6" className="about__info__heading">
+								EXPERIENCE
+							</Typography>
+
 							<AboutInfoItem
 								title="2021 - NOW"
 								items={[

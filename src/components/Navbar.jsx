@@ -1,12 +1,11 @@
 import React from "react";
-import "../index.css";
-import { Typography, useMediaQuery } from "@mui/material";
-import logo from "../images/logo.png";
+import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import styled from "styled-components";
+import MobileNav from "./MobileNav";
+import PCNav from "./PCNav";
 
 const NavStyles = styled.div`
 	nav {
-		
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -41,6 +40,9 @@ const NavStyles = styled.div`
 	#logo {
 		height: 2rem;
 	}
+	.mobile-logo {
+		height: 25px;
+	}
 	.center-container {
 		display: flex;
 		align-items: center;
@@ -48,105 +50,27 @@ const NavStyles = styled.div`
 	}
 `;
 
+const theme = createTheme({
+	palette: {
+		primary: {
+			main: "#2a2a2a",
+		},
+	},
+});
+
 function Device() {
 	const pc = useMediaQuery("(min-width: 768px)");
 
 	if (pc) {
 		return (
 			<NavStyles>
-				<nav>
-					<div className="nav-section">
-						<div className="center-container">
-							<a href="#">
-								<img src={logo} id="logo" />
-							</a>
-							<a href="#">
-								<Typography variant="p" sx={{ paddingLeft: 1.5, fontSize: 20 }}>
-									NICK WRIGHT
-								</Typography>
-							</a>
-						</div>
-					</div>
-
-					<div className="nav-section">
-						<ul className="center-container">
-							<li>
-								<a href="#">
-									<Typography variant="p">HOME</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#about">
-									<Typography variant="p">ABOUT</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#projects">
-									<Typography variant="p">PROJECTS</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#skills">
-									<Typography variant="p">SKILLS</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#contact">
-									<Typography variant="p">CONTACT</Typography>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
+				<PCNav />
 			</NavStyles>
 		);
 	} else {
 		return (
 			<NavStyles>
-				<nav>
-					<div className="nav-section">
-						<div className="center-container">
-							<a href="#">
-								<img src={logo} id="logo" />
-							</a>
-							<a href="#">
-								<Typography variant="p" sx={{ paddingLeft: 1.5, fontSize: 20 }}>
-									NICK WRIGHT
-								</Typography>
-							</a>
-						</div>
-					</div>
-
-					<div className="nav-section">
-						<ul className="center-container">
-							<li>
-								<a href="#">
-									<Typography variant="p">HOME</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#about">
-									<Typography variant="p">ABOUT</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#projects">
-									<Typography variant="p">PROJECTS</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#skills">
-									<Typography variant="p">SKILLS</Typography>
-								</a>
-							</li>
-							<li>
-								<a href="#contact">
-									<Typography variant="p">CONTACT</Typography>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
+				<MobileNav />
 			</NavStyles>
 		);
 	}
@@ -154,9 +78,11 @@ function Device() {
 
 const Navbar = () => {
 	return (
-		<NavStyles>
-			<Device />
-		</NavStyles>
+		<ThemeProvider theme={theme}>
+			<NavStyles>
+				<Device />
+			</NavStyles>
+		</ThemeProvider>
 	);
 };
 

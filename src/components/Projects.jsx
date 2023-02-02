@@ -14,16 +14,13 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const ProjectsStyles = styled.div`
-	padding: 4rem 0;
+	padding: 5rem 0;
 	text-align: center;
 	.header {
-		padding: 1rem;
+		padding: 2rem;
 	}
 	@media only screen and (max-width: 768px) {
-		.p1,
-		.p2 {
-			display: none;
-		}
+		padding: 1rem 0;
 	}
 `;
 
@@ -58,13 +55,13 @@ function ResponsiveLayout() {
 
 const Projects = () => {
 	return (
-		<ProjectsStyles>
-			<ThemeProvider theme={theme}>
-				<section id="projects">
+		<ThemeProvider theme={theme}>
+			<ProjectsStyles id="projects">
+				<section>
 					<ResponsiveLayout />
 				</section>
-			</ThemeProvider>
-		</ProjectsStyles>
+			</ProjectsStyles>
+		</ThemeProvider>
 	);
 };
 
