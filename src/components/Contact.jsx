@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 
 // Import MUI
-import { Typography, TextField, Box, Button } from "@mui/material";
+import { Typography, TextField, Box, Button, Modal } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
@@ -14,8 +14,7 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const ContactStyles = styled.div`
-	padding-top: 5rem;
-	padding-bottom: 10rem;
+	padding: 2.5rem 1.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -41,15 +40,14 @@ const ContactStyles = styled.div`
 		float: right;
 		background-color: #000;
 	}
-	@media only screen and (max-width: 768px) {
-		padding: 0 1rem;
-		padding-top: 5rem;
-		padding-bottom: 10rem;
-	}
 `;
 
 const Contact = () => {
 	const form = useRef();
+	const [open, setOpen] = React.useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
+
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -112,10 +110,37 @@ const Contact = () => {
 								variant="contained"
 								type="submit"
 								endIcon={<SendIcon />}
+								onClick={handleOpen}
 								className="btn"
 							>
 								Send
 							</Button>
+
+							<div>
+								<Modal open={open} onClose={handleClose}>
+									<Box
+										sx={{
+											position: "absolute",
+											top: "50%",
+											left: "50%",
+											transform: "translate(-50%, -50%)",
+											width: "100%",
+											maxWidth: 400,
+											textAlign: "center",
+											bgcolor: "background.paper",
+											color: "#000",
+											borderRadius: "10px",
+											boxShadow: 24,
+											p: 4,
+										}}
+									>
+										<Typography variant="h3">Email Sent</Typography>
+										<Typography variant="h5">
+											Thank you for sending me an email!
+										</Typography>
+									</Box>
+								</Modal>
+							</div>
 						</form>
 					</Box>
 				</ContactStyles>

@@ -2,6 +2,7 @@ import React from "react";
 
 // Imports Images
 import square from "../images/headshot.jpg";
+import pdf from "../images/resume.pdf";
 
 // Imports Libraries
 import { Button, ButtonGroup, Typography } from "@mui/material";
@@ -91,7 +92,7 @@ const Main = () => {
 								</Button>
 								<Button
 									variant="contained"
-									href="../images/resume.pdf"
+									href={pdf}
 									download
 									sx={{ backgroundColor: "black" }}
 								>

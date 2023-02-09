@@ -5,16 +5,19 @@ const AboutItemStyles = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	position: relative;
 	.title {
+		display: flex;
+		justify-content: top;
+		width: 100%;
+		max-width: 20%;
 		font-size: 2.4rem;
 	}
 	.items {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 1rem;
-		position: absolute;
-		left: 15rem;
 	}
 	.item {
 		background-color: #2a2a2a;
@@ -24,15 +27,18 @@ const AboutItemStyles = styled.div`
 	@media only screen and (max-width: 768px) {
 		flex-direction: column;
 		align-items: flex-start;
-		gap: .8rem;
+		gap: .2rem;
 		.items {
 			display: flex;
 			flex-wrap: wrap;
 			position: initial;
 			gap: 1rem;
 		}
+		.item {
+			font-size: 1rem;
+		}
 		.title {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 		}
 	}
 `;

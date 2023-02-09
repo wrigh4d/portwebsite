@@ -10,9 +10,9 @@ const NavStyles = styled.div`
 		align-items: center;
 		justify-content: space-between;
 		position: fixed;
-		background-color: transparent;
+		background-color: #2a2a2a;
 		width: 100%;
-		height: 6rem;
+		height: 5rem;
 		margin: 0 auto;
 		left: 0;
 		top: 0;
