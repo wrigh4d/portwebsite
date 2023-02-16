@@ -3,7 +3,7 @@
 
 
 <!-- PROJECT SHIELDS -->
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/nick-wright12/]
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/nick-wright12/)
 
 <!-- PROJECT LOGO -->
 <br />
