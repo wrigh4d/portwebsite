@@ -21,9 +21,9 @@ import "../index.css";
 // import required modules
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
-import { Keyboard, Pagination, Navigation } from "swiper";
+import { Keyboard, Navigation } from "swiper";
 import styled from "styled-components";
-import { Tooltip } from "@mui/material";
+import { Button, Tooltip } from "@mui/material";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
@@ -32,14 +32,23 @@ const CarouselStyles = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	.btn {
+		margin: 10px;
+		border-radius: 10px;
+		font-size: 20px;
+		width: 85%;
+		max-width: 100%;
+	}
 	.mySwiper {
 		width: 100%;
-		max-width: 80%;
+		max-width: 100%;
 	}
 	.swiper-slide {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		align-text: center;
 		background: transparent;
 	}
 	.swiper-slide img {
@@ -73,31 +82,43 @@ const Carousel = () => {
 							keyboard={{
 								enabled: true,
 							}}
-							pagination={{
-								clickable: true,
-							}}
 							navigation={true}
-							modules={[Keyboard, Pagination, Navigation]}
+							modules={[Keyboard, Navigation]}
 							className="mySwiper"
 						>
 							<SwiperSlide>
 								<img src={square1} alt="" />
+								<Button href="https://github.com/wrigh4d/portwebsite" target="_blank" variant="contained" color="secondary" className="btn">
+									Github
+								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>
 								<img src={square2} alt="" />
+								<Button href="https://github.com/wrigh4d/PollingWebsite" target="_blank" variant="contained" color="secondary" className="btn">
+									Github
+								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>
 								<img src={square3} alt="" />
+								<Button href="https://github.com/wrigh4d/Buffbud" target="_blank" variant="contained" color="secondary" className="btn">
+									Github
+								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>
 								<img src={square4} alt="" />
+								<Button href="https://github.com/wrigh4d/MagiciansNightmare" target="_blank" variant="contained" color="secondary" className="btn">
+									Github
+								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>
 								<img src={square5} alt="" />
+								<Button href="https://github.com/wrigh4d/CrazyTaxi" target="_blank" variant="contained" color="secondary" className="btn">
+									Github
+								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>

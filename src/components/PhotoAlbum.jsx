@@ -9,7 +9,7 @@ import square5 from "../images/about5.jpg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -21,7 +21,6 @@ import "../index.css";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
-import { Typography } from "@mui/material";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
@@ -38,15 +37,13 @@ const CarouselStyles = styled.div`
 		align-items: center;
 		align-text: center;
 		background: transparent;
-		
 	}
 	.swiper-slide img {
 		cursor: pointer;
 		display: block;
-		height: 100%;
 		object-fit: cover;
 		width: 100%;
-		max-width: 70%;
+		max-width: 100%;
 		border-radius: 10px;
 	}
 	.swiper-button-next,
@@ -61,7 +58,7 @@ const CarouselStyles = styled.div`
 	@media only screen and (max-width: 768px) {
 		.swiper-slide img {
 			width: 100%;
-			max-width: 80%;
+			max-width: 100%;
 		}
 	}
 `;
@@ -74,33 +71,32 @@ const PhotoAlbum = () => {
 					<Swiper
 						slidesPerView={1}
 						spaceBetween={30}
-						navigation={true}
-						modules={[Navigation, Autoplay]}
+						loop
+						autoplay={{
+							delay: 4000,
+							disableOnInteraction: false,
+						}}
+						modules={[Autoplay]}
 						className="mySwiper"
 					>
 						<SwiperSlide>
 							<img src={square1} alt="" />
-							<Typography variant="h6">FAMILY PHOTO - MOM | 2022</Typography>
 						</SwiperSlide>
 
 						<SwiperSlide>
 							<img src={square5} alt="" />
-							<Typography variant="h6">FAMILY PHOTO - DAD | 2022</Typography>
 						</SwiperSlide>
 
 						<SwiperSlide>
 							<img src={square2} alt="" />
-							<Typography variant="h6">AMANDA & I | 2022</Typography>
 						</SwiperSlide>
 
 						<SwiperSlide>
 							<img src={square3} alt="" />
-							<Typography variant="h6">SISTER'S GRADUATION | 2022</Typography>
 						</SwiperSlide>
 
 						<SwiperSlide>
 							<img src={square4} alt="" />
-							<Typography variant="h6">BEN & I | 2022</Typography>
 						</SwiperSlide>
 					</Swiper>
 				</CarouselStyles>

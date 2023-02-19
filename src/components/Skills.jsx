@@ -8,13 +8,12 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
 import { Typography } from "@mui/material";
-import EastIcon from "@mui/icons-material/East";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const SkillsStyles = styled.div`
-	padding: 2.5rem 7rem;
+	padding: 2.5rem 12rem;
 	.header {
 		padding: 1rem;
 		text-align: center;
@@ -77,7 +76,7 @@ const Skills = () => {
 							<Typography variant="h6" className="about__info__heading">
 								RELEVANT COURSES
 							</Typography>
-
+							
 							<AboutInfoItem
 								title="CPS CLASSES"
 								items={[
@@ -97,7 +96,7 @@ const Skills = () => {
 								]}
 							/>
 						</div>
-
+						
 						<div className="about__info__item">
 							<AboutInfoItem
 								title="ITC CLASSES"
@@ -108,7 +107,9 @@ const Skills = () => {
 									"ITC 383 - Video Game Design",
 								]}
 							/>
+							
 						</div>
+
 						<div className="about__info__item">
 							<AboutInfoItem
 								title="MMD CLASSES"

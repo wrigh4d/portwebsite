@@ -2,10 +2,9 @@ import React from "react";
 
 // Imports Images
 import square from "../images/headshot.jpg";
-import pdf from "../images/resume.pdf";
 
 // Imports Libraries
-import { Button, ButtonGroup, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
@@ -73,7 +72,7 @@ const Main = () => {
 						>
 							<Typography variant="h1">Nick Wright</Typography>
 							<Typography variant="h5">
-								-COMPUTER SCIENCE GRADUATE FROM CENTRAL MICHIGAN UNIVERSITY-
+								-COMPUTER SCIENCE STUDENT AT CENTRAL MICHIGAN UNIVERSITY-
 							</Typography>
 						</motion.div>
 						<motion.div
@@ -81,24 +80,15 @@ const Main = () => {
 							animate={{ x: 0 }}
 							transition={{ type: "spring", duration: 1, bounce: 0.3 }}
 						>
-							<ButtonGroup variant="text" aria-label="text button group">
-								<Button
-									variant="contained"
-									type="submit"
-									href="#contact"
-									sx={{ backgroundColor: "black" }}
-								>
-									Contact Me
-								</Button>
-								<Button
-									variant="contained"
-									href={pdf}
-									download
-									sx={{ backgroundColor: "black" }}
-								>
-									Download Resume
-								</Button>
-							</ButtonGroup>
+							<Button
+								variant="contained"
+								color="secondary"
+								type="submit"
+								href="#contact"
+								sx={{ fontSize: "18px" }}
+							>
+								Contact Me
+							</Button>
 						</motion.div>
 					</div>
 				</MainStyles>

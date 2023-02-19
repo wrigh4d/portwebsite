@@ -17,10 +17,13 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const ProjectsStyles = styled.div`
-	padding: 2.5rem 0;
+	padding: 2.5rem 12rem;
 	text-align: center;
 	.header {
 		padding: 1rem;
+	}
+	@media only screen and (max-width: 768px) {
+		padding: 2.5rem 0;
 	}
 `;
 
@@ -55,8 +58,9 @@ function ResponsiveLayout() {
 				<div className="header" ref={ref}>
 					<Typography variant="h1">PROJECTS</Typography>
 					<motion.div animate={animation}>
-						<Typography variant="h5">-SWIPE THROUGH MY PROJECTS-</Typography>
+						<Typography variant="h5">-SWIPE THROUGH MY WORK-</Typography>
 					</motion.div>
+					
 				</div>
 				<Carousel />
 			</>
@@ -67,7 +71,7 @@ function ResponsiveLayout() {
 				<div className="header" ref={ref}>
 					<Typography variant="h1">PROJECTS</Typography>
 					<motion.div animate={animation}>
-						<Typography variant="h6">-SWIPE THROUGH MY PROJECTS-</Typography>
+						<Typography variant="h6">-SWIPE THROUGH MY WORK-</Typography>
 					</motion.div>
 				</div>
 				<MobileCarousel />

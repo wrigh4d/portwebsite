@@ -20,6 +20,10 @@ const ContactStyles = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	.header {
+		padding: 1rem;
+		text-align: center;
+	}
 	.textfield {
 		width: calc(50% - 20px);
 		max-width: 100%;
@@ -38,7 +42,6 @@ const ContactStyles = styled.div`
 		border-radius: 5px;
 		margin: 10px;
 		float: right;
-		background-color: #000;
 	}
 `;
 
@@ -72,8 +75,11 @@ const Contact = () => {
 		<>
 			<ThemeProvider theme={theme}>
 				<ContactStyles id="contact">
-					<Typography variant="h1">CONTACT ME{"\n"}</Typography>
-					<Typography variant="h5">-GET IN TOUCH-</Typography>
+					<div className="header">
+						<Typography variant="h1">CONTACT ME{"\n"}</Typography>
+						<Typography variant="h5">-GET IN TOUCH-</Typography>
+					</div>
+
 					<Box sx={{ width: 1000, maxWidth: "100%" }}>
 						<form ref={form} onSubmit={sendEmail}>
 							<TextField
@@ -109,6 +115,7 @@ const Contact = () => {
 							<Button
 								variant="contained"
 								type="submit"
+								color="secondary"
 								endIcon={<SendIcon />}
 								onClick={handleOpen}
 								className="btn"

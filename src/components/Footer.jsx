@@ -79,7 +79,7 @@ const Footer = () => {
 						</div>
 						<div className="col d-flex">
 							<h4>USEFUL LINKS</h4>
-							<a href={pdf} download>
+							<a href={pdf} target="_blank" rel="noreferrer">
 								DOWNLOAD RESUME
 							</a>
 						</div>

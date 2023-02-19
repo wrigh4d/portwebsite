@@ -3,13 +3,11 @@ import styled from "styled-components";
 
 const AboutItemStyles = styled.div`
 	display: flex;
-	align-items: center;
 	justify-content: flex-start;
 	margin-top: 1.5rem;
 	position: relative;
 	.title {
 		display: flex;
-		justify-content: top;
 		width: 100%;
 		max-width: 20%;
 		font-size: 2.4rem;
@@ -27,7 +25,7 @@ const AboutItemStyles = styled.div`
 	@media only screen and (max-width: 768px) {
 		flex-direction: column;
 		align-items: flex-start;
-		gap: .2rem;
+		gap: 0.2rem;
 		.items {
 			display: flex;
 			flex-wrap: wrap;
@@ -38,6 +36,8 @@ const AboutItemStyles = styled.div`
 			font-size: 1rem;
 		}
 		.title {
+			width: 100%;
+			max-width: 100%;
 			font-size: 1.6rem;
 		}
 	}
