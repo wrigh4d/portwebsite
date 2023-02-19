@@ -64,11 +64,11 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const items = [
-	{ text: "HOME", s: "#" },
-	{ text: "ABOUT", s: "#about" },
-	{ text: "PROJECTS", s: "#projects" },
-	{ text: "SKILLS", s: "#skills" },
-	{ text: "CONTACT", s: "#contact" },
+	{ text: "HOME", s: "/#" },
+	{ text: "ABOUT", s: "/#about" },
+	{ text: "PROJECTS", s: "/#projects" },
+	{ text: "SKILLS", s: "/#skills" },
+	{ text: "CONTACT", s: "/#contact" },
 ];
 
 export default function MobileNav() {
@@ -96,8 +96,8 @@ export default function MobileNav() {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Button href="#">
-						<img src={logo} className="mobile-logo" />
+					<Button href="/#">
+						<img src={logo} alt="" className="mobile-logo" />
 					</Button>
 				</Toolbar>
 			</AppBar>
@@ -110,7 +110,9 @@ export default function MobileNav() {
 						boxSizing: "border-box",
 					},
 				}}
-				variant="persistent"
+				variant="temporary"
+				onEscapeKeyDown={handleDrawerClose}
+				onBackdropClick={handleDrawerClose}
 				anchor="left"
 				open={open}
 			>
