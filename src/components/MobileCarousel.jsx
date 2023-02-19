@@ -6,8 +6,8 @@ import square2 from "../images/pollinateMobile.jpg";
 import square3 from "../images/buffbudMobile.jpg";
 import square4 from "../images/mageMobile.jpg";
 import square5 from "../images/taxiMobile.jpg";
-import square6 from "../images/projectsMobile.jpg";
-import square7 from "../images/mmdMobile.jpg";
+import square6 from "../images/mmdMobile.jpg";
+import square7 from "../images/projectsMobile.jpg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -85,7 +85,7 @@ const MobileCarousel = () => {
 						>
 							<SwiperSlide>
 								<img src={square1} alt="" />
-								<Button href="https://github.com/wrigh4d/portwebsite" target="_blank" variant="contained" color="secondary" className="btn">
+								<Button href="https://github.com/wrigh4d/UWMFlashcard" target="_blank" variant="contained" color="secondary" className="btn">
 									Github
 								</Button>
 							</SwiperSlide>
@@ -120,6 +120,9 @@ const MobileCarousel = () => {
 
 							<SwiperSlide>
 								<img src={square6} alt="" />
+								<Button href="https://github.com/wrigh4d/portwebsite" target="_blank" variant="contained" color="secondary" className="btn">
+									Github
+								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>
