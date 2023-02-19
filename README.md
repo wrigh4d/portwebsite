@@ -1,82 +1,131 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<!-- PROJECT SHIELDS -->
+[![Stargazers][stars-shield]](https://github.com/wrigh4d/portwebsite/stargazers)
+[![Issues][issues-shield]](https://github.com/wrigh4d/portwebsite/issues)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/nick-wright12/)
 
-### `npm start`
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/wrigh4d/portwebsite">
+    <img src="src/images/logoblack.png" alt="Logo" width="80" height="80">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h1 align="center">Portfolio Website</h1>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <p align="center">
+    This website contains several sections including projects, relevant courses and much more information that defines who I am. This is continuios project that I plan to constantly update with new projects and other materials. 
+    <br />
+    If you have any further questions, please feel free to contact me at: wrigh4d@cmich.edu
+    <br />
+    <a href="https://github.com/wrigh4d/portwebsite"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://www.nwrightport.com">View Website</a>
+    ·
+    <a href="https://github.com/wrigh4d/portwebsite/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/wrigh4d/portwebsite/issues">Request Feature</a>
+  </p>
+</div>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### `npm run eject`
+<a href="https://www.nwrightport.com">
+    <img src="src/images/screenshot.png" alt="Logo" width="100%">
+  </a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h1>WRITE GENERAL INFORMATION HERE</h1>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [![React][React.js]][React-url]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<!-- USAGE EXAMPLES -->
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-### Making a Progressive Web App
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<!-- ROADMAP -->
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [ ] Add Blog Page
+    - [ ] Create Blogs on Projects
+- [ ] Add More Projects
+- [ ] General To Do:
+    - [ ] Edit About Me Section
+    - [ ] Add Github to Projects
+    - [ ] Clear Contact Info
 
-### `npm run build` fails to minify
+See the [open issues](https://github.com/wrigh4d/portwebsite/issues) for a full list of proposed features (and known issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# portwebsite
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section is for future animation integration:
 
-import useEffect
-import motion, { useAnimation } from "framer-motion";
-To do scrolling animations - import { useInView } from 'react-intersection-observer';
-const {ref, inView} = useInView({0.2});
-ref={ref} in parent div
-useEffect(() => { if(inView) { animation.start({ x: 0, transition: {type: "spring", duration: 1, bounce: 0.3}});} if(!inView) {animation.start({ x: "-100vw"})}}, [inView]);
-const animation = useAnimation();
-motion. div animate={animation}
+<!-- CONTACT -->
+## Contact
+
+Nick Wright - wrigh4d@cmich.edu
+
+Project Link: [https://github.com/wrigh4d/portwebsite](https://www.nwrightport.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
