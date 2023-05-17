@@ -106,15 +106,15 @@ const MobileCarousel = () => {
 
 							<SwiperSlide>
 								<img src={square4} alt="" />
-								<Button href="https://github.com/wrigh4d/MagiciansNightmare" target="_blank" variant="contained" color="secondary" className="btn">
-									Github
+								<Button href="https://nickwright.itch.io/slime-slayer" target="_blank" variant="contained" color="secondary" className="btn">
+									Game Download
 								</Button>
 							</SwiperSlide>
 
 							<SwiperSlide>
 								<img src={square5} alt="" />
-								<Button href="https://github.com/wrigh4d/CrazyTaxi" target="_blank" variant="contained" color="secondary" className="btn">
-									Github
+								<Button href="https://nickwright.itch.io/crazy-taxi" target="_blank" variant="contained" color="secondary" className="btn">
+									Download Game
 								</Button>
 							</SwiperSlide>
 
