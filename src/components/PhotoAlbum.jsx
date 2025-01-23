@@ -1,11 +1,11 @@
 import React from "react";
 
 // Import Images
-import square1 from "../images/about1.jpg";
-import square2 from "../images/about2.jpg";
-import square3 from "../images/about3.jpg";
-import square4 from "../images/about4.jpg";
-import square5 from "../images/about5.jpg";
+import square1 from "../images/about1.webp";
+import square2 from "../images/about2.webp";
+import square3 from "../images/about3.webp";
+import square4 from "../images/about4.webp";
+import square5 from "../images/about5.webp";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

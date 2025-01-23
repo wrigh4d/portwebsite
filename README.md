@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/wrigh4d/portwebsite">
-    <img src="src/images/logoblack.png" alt="Logo" width="80" height="80">
+    <img src="src/images/logoblack.webp" alt="Logo" width="80" height="80">
   </a>
 
 <h1 align="center">Portfolio Website</h1>
@@ -66,7 +66,7 @@
 ## About The Project
 
 <a href="https://www.nwrightport.com">
-    <img src="src/images/screenshot.png" alt="Logo" width="100%">
+    <img src="src/images/screenshot.webp" alt="Logo" width="100%">
   </a>
 
 <h1>WRITE GENERAL INFORMATION HERE</h1>

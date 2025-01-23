@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import logo from "../images/logo.png";
+import logo from "../images/logo.webp";
 
 
 export default function MobileNav() {

@@ -14,7 +14,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import logo from "../images/logo.png";
+import logo from "../images/logo.webp";
 
 const drawerWidth = 180;
 

@@ -1,13 +1,13 @@
 import React from "react";
 
 // Import Images
-import square1 from "../images/uwm.jpg";
-import square2 from "../images/pollinate.jpg";
-import square3 from "../images/buffbud.jpg";
-import square4 from "../images/mage.jpg";
-import square5 from "../images/taxi.jpg";
-import square6 from "../images/mmd.jpg";
-import square7 from "../images/projects.jpg";
+import square1 from "../images/uwm.webp";
+import square2 from "../images/pollinate.webp";
+import square3 from "../images/buffbud.webp";
+import square4 from "../images/mage.webp";
+import square5 from "../images/taxi.webp";
+import square6 from "../images/mmd.webp";
+import square7 from "../images/projects.webp";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

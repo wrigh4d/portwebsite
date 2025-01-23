@@ -70,24 +70,38 @@ const About = () => {
 							<div className="text__container">
 								{/* <Typography variant="h2">ABOUT</Typography> */}
 								<Typography variant="h5">
-									My name is Nick Wright, I am in my final semester of college
-									at Central Michigan University studying Computer Science with
-									a minor in Multimedia Design.
+									Hi, I{"’"}m Nick Wright💻 — a computer science graduate and passionate 
+									programmer who strives to create innovative and efficient solutions. 
+									I currently work at United Wholesale Mortgage, the nation’s #1 mortgage 
+									company, where I design and implement innovative solutions to automate 
+									the mortgage underwriting process, including utilizing AI for tasks 
+									such as bank statement analysis and data extraction.
 								</Typography>
 								<br />
 								<Typography variant="h5">
-									I am a triplet and child of four who grew up in Mid-Michigan.
-									I am a hard working individual who fell in love with
-									programming in highschool because of my AP Computer Science
-									teacher Mr. Kato.
+									My role involves working within a robust codebase powered by ASP.NET 
+									microservices, where I focus on building scalable, performant, and 
+									user-friendly solutions that streamline operations and enhance engagement. 
+									Every day, I strive to write code that is not only effective but also 
+									maintainable and readable for future development.
 								</Typography>
 								<br />
 								<Typography variant="h5">
-									In my free time, I enjoy playing board games like Wingspan,
-									Space Base, and Catan. I enjoy spending time with friends and
-									family. I also, thoroughly enjoy nature. I have visited over
-									20 of America{"’"}s national parks with my family and I dream
-									to visit all of them one day.
+									Outside of work, I{"’"}m passionate about travel and have set a personal 
+									goal to visit all 63 national parks. I am also an enthusiastic board 
+									game player, and an amateur photographer. Additionally, I love working 
+									on side projects that challenge my creativity and technical skills.
+								</Typography>
+								<br />
+								<Typography variant="h5">
+									I{"’"}m driven by the opportunity to innovate, solve complex problems, 
+									and collaborate with talented individuals who share a vision for creating 
+									impactful technology.
+								</Typography>
+								<br />
+								<Typography variant="h5">
+									Let{"’"}s connect and discuss how we can work together to build something 
+									extraordinary!
 								</Typography>
 								<br />
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Imports Images
-import square from "../images/headshot.jpg";
+import square from "../images/headshot.webp";
 
 // Imports Libraries
 import { Button, Typography } from "@mui/material";
@@ -72,7 +72,7 @@ const Main = () => {
 						>
 							<Typography variant="h1">Nick Wright</Typography>
 							<Typography variant="h5">
-								-COMPUTER SCIENCE STUDENT AT CENTRAL MICHIGAN UNIVERSITY-
+								- SOFTWARE DEVELOPER AT UNITED WHOLESALE MORTGAGE -
 							</Typography>
 						</motion.div>
 						<motion.div

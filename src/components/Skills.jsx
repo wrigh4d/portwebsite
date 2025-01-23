@@ -65,18 +65,55 @@ const Skills = () => {
 					<section className="about__info__items">
 						<div className="header">
 							<Typography variant="h1">SKILLS & EXPERIENCE</Typography>
-							<Typography variant="h5">-SCROLL THROUGH MY INFO-</Typography>
+							<Typography variant="h5">- SCROLL THROUGH MY INFO -</Typography>
+						</div>
+
+						<div className="about__info__item">
+							<Typography variant="h6" className="about__info__heading">
+								EXPERIENCE
+							</Typography>
+
+							<AboutInfoItem
+								title="2021 - NOW"
+								items={[
+									"RESEARCH LIBRARIAN ASSISTANT AT CENTRAL MICHIGAN UNIVERSITY",
+								]}
+							/>
+							<AboutInfoItem
+								title="2022 - 2022"
+								items={[
+									"SOFTWARE DEVELOPER INTERN AT UNITED WHOLESALE MORTGAGE",
+								]}
+							/>
+							<AboutInfoItem
+								title="2018 - 2019"
+								items={["KID'S CAMP COUNSELOR AT YMCA OF LANSING"]}
+							/>
+						</div>
+
+						<div className="about__info__item">
+							<Typography variant="h6" className="about__info__heading">
+								MY SKILLS
+							</Typography>
+
+							<AboutInfoItem
+								title="FRONTEND"
+								items={["HTML", "CSS", "JS", "REACT"]}
+							/>
+							<AboutInfoItem
+								title="BACKEND"
+								items={["JAVA", "C#", "SQL", "C PROGRAMMING", "ASSEMBLY"]}
+							/>
+							<AboutInfoItem
+								title="OTHER"
+								items={["UNITY", "PHOTOSHOP", "ILLUSTRATOR", "INDESIGN"]}
+							/>
 						</div>
 
 						<div className="about__info__item">
 							<Typography variant="h6" className="about__info__heading">
 								EDUCATION
 							</Typography>
-
-							<AboutInfoItem
-								title="SCHOOL"
-								items={["Mason High School, Mason MI"]}
-							/>
 
 							<AboutInfoItem
 								title="COLLEGE"
@@ -133,46 +170,7 @@ const Skills = () => {
 								]}
 							/>
 						</div>
-						<div className="about__info__item">
-							<Typography variant="h6" className="about__info__heading">
-								MY SKILLS
-							</Typography>
 
-							<AboutInfoItem
-								title="FRONTEND"
-								items={["HTML", "CSS", "JS", "REACT"]}
-							/>
-							<AboutInfoItem
-								title="BACKEND"
-								items={["JAVA", "C#", "SQL", "C PROGRAMMING", "ASSEMBLY"]}
-							/>
-							<AboutInfoItem
-								title="OTHER"
-								items={["UNITY", "PHOTOSHOP", "ILLUSTRATOR", "INDESIGN"]}
-							/>
-						</div>
-						<div className="about__info__item">
-							<Typography variant="h6" className="about__info__heading">
-								EXPERIENCE
-							</Typography>
-
-							<AboutInfoItem
-								title="2021 - NOW"
-								items={[
-									"RESEARCH LIBRARIAN ASSISTANT AT CENTRAL MICHIGAN UNIVERSITY",
-								]}
-							/>
-							<AboutInfoItem
-								title="2022 - 2022"
-								items={[
-									"SOFTWARE DEVELOPER INTERN AT UNITED WHOLESALE MORTGAGE",
-								]}
-							/>
-							<AboutInfoItem
-								title="2018 - 2019"
-								items={["KID'S CAMP COUNSELOR AT YMCA OF LANSING"]}
-							/>
-						</div>
 						<div className="about__info__item">
 							<Typography variant="h6" className="about__info__heading">
 								CLARKE HISTORICAL LIBRARY PROJECTS
