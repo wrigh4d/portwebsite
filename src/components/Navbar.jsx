@@ -1,34 +1,42 @@
 import React from "react";
-import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
+import logo from "../images/logo.webp";
 import styled from "styled-components";
-import MobileNav from "./MobileNav";
-import PCNav from "./PCNav";
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import FolderIcon from '@mui/icons-material/Folder';
+import WorkIcon from '@mui/icons-material/Work';
+import EmailIcon from '@mui/icons-material/Email';
 
 const NavStyles = styled.div`
 	nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		position: fixed;
-		background-color: #2a2a2a;
 		width: 100%;
-		height: 5rem;
+		height: 88px;
 		margin: 0 auto;
-		left: 0;
-		top: 0;
 		z-index: 100;
 	}
 	nav .nav-section {
-		padding: 0 80px;
+		width: 292px;
+		height: 48px;
+		background-color: #2a2a2a;
+		border-radius: 10px;
 		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
 	}
 	li {
 		font-size: 20px;
 		list-style: none;
-		padding: 0 20px;
 		position: relative;
 	}
 	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		text-decoration: none;
 		color: #fff;
 		transition: 0.3s ease-in-out;
@@ -38,15 +46,16 @@ const NavStyles = styled.div`
 		transform: scale(0.97);
 	}
 	#logo {
-		height: 2rem;
+		height: 1rem;
 	}
 	.mobile-logo {
-		height: 25px;
+		height: 20px;
 	}
 	.center-container {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		gap: 20px;
 	}
 `;
 
@@ -58,29 +67,41 @@ const theme = createTheme({
 	},
 });
 
-function Device() {
-	const pc = useMediaQuery("(min-width: 768px)");
-
-	if (pc) {
-		return (
-			<NavStyles>
-				<PCNav />
-			</NavStyles>
-		);
-	} else {
-		return (
-			<NavStyles>
-				<MobileNav />
-			</NavStyles>
-		);
-	}
-}
-
 const Navbar = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<NavStyles>
-				<Device />
+				<nav>
+					<div className="nav-section">
+						<ul className="center-container">
+							<li>
+								<a href="/#">
+									<img src={logo} alt="" id="logo" />
+								</a>
+							</li>
+							<li>
+								<a href="/#about">
+									<AccountBoxIcon/>
+								</a>
+							</li>
+							<li>
+								<a href="/#projects">
+									<FolderIcon/>
+								</a>
+							</li>
+							<li>
+								<a href="/#skills">
+									<WorkIcon/>
+								</a>
+							</li>
+							<li>
+								<a href="/#contact">
+									<EmailIcon/>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 			</NavStyles>
 		</ThemeProvider>
 	);
