@@ -1,99 +1,92 @@
 import React from "react";
 
-// Imports Images
-import square from "../images/headshot.webp";
+import headshot from "../images/headshot.webp";
 
-// Imports Libraries
 import { Button, Typography } from "@mui/material";
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
-import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
-
-const MainStyles = styled.div`
-	width: 100%;
-	height: 100vh;
+const MainStyles = styled.section`
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	.header {
-		padding: 1rem;
-	}
+	padding: 6rem var(--section-padding-x) 4rem;
+
 	.headshot {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		border-radius: 100%;
-		max-width: 300px;
-		width: 90%;
-		align-items: center;
+		width: min(260px, 70vw);
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 1px solid var(--border);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 	}
-	.text {
-		padding: 1.5rem;
+
+	.eyebrow {
+		display: inline-block;
+		margin-top: 2rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--accent);
 	}
-	@media only screen and (max-width: 768px) {
-		height: calc(100vh - 56px);
-		padding: 0;
+
+	.role {
+		margin: 0.5rem auto 0;
+		max-width: 34ch;
+	}
+
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.75rem;
+		margin-top: 2rem;
 	}
 `;
 
 const Main = () => {
 	return (
-		<>
-			<ThemeProvider theme={theme}>
-				<MainStyles id="home">
-					<div>
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5 }}
-							animate={{ opacity: 1, scale: 1 }}
-							transition={{
-								default: {
-									duration: 0.3,
-									ease: [0, 0.71, 0.2, 1.01],
-								},
-								scale: {
-									type: "spring",
-									damping: 5,
-									stiffness: 100,
-									restDelta: 0.001,
-								},
-							}}
-						>
-							<img src={square} alt="" className="headshot" />
-						</motion.div>
-						<motion.div
-							className="header"
-							initial={{ x: "-100vw" }}
-							animate={{ x: 0 }}
-							transition={{ type: "spring", duration: 1, bounce: 0.3 }}
-						>
-							<Typography variant="h1">Nick Wright</Typography>
-							<Typography variant="h5">
-								- SOFTWARE DEVELOPER AT UNITED WHOLESALE MORTGAGE -
-							</Typography>
-						</motion.div>
-						<motion.div
-							initial={{ x: "100vw" }}
-							animate={{ x: 0 }}
-							transition={{ type: "spring", duration: 1, bounce: 0.3 }}
-						>
-							<Button
-								variant="contained"
-								color="secondary"
-								type="submit"
-								href="#contact"
-								sx={{ fontSize: "18px" }}
-							>
-								Contact Me
-							</Button>
-						</motion.div>
-					</div>
-				</MainStyles>
-			</ThemeProvider>
-		</>
+		<MainStyles id="home">
+			<motion.div
+				initial={{ opacity: 0, y: 16 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5, ease: "easeOut" }}
+			>
+				<img src={headshot} alt="Portrait of Nick Wright" className="headshot" />
+			</motion.div>
+
+			<motion.div
+				initial={{ opacity: 0, y: 16 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+			>
+				<span className="eyebrow">Software Developer</span>
+				<Typography variant="h1" component="h1">
+					Nick Wright
+				</Typography>
+				<Typography variant="h5" component="p" className="role">
+					Building automation and AI-assisted tooling at United Wholesale Mortgage.
+				</Typography>
+			</motion.div>
+
+			<motion.div
+				className="actions"
+				initial={{ opacity: 0, y: 16 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+			>
+				<Button variant="contained" color="primary" href="#contact">
+					Contact me
+				</Button>
+				<Button variant="contained" color="secondary" href="#projects">
+					View projects
+				</Button>
+			</motion.div>
+		</MainStyles>
 	);
 };
 

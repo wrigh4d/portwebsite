@@ -1,110 +1,141 @@
 import React from "react";
-
-// Import MUI
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
-import { ThemeProvider } from "@emotion/react";
 import styled from "styled-components";
-import pdf from "../images/resume.pdf";
+import { Typography } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
+import resume from "../images/resume.pdf";
 
-const FooterStyles = styled.div`
-	position: relative;
-	bottom: 0;
-	height: 300px;
-	width: 100%;
-	background-color: #2a2a2a;
-	padding-top: 100px;
-	margin-top: 2.5rem;
-	.row {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		max-width: 99.6rem;
+const SOCIALS = [
+	{
+		label: "LinkedIn",
+		href: "https://www.linkedin.com/in/nick-wright12/",
+		Icon: LinkedInIcon,
+	},
+	{
+		label: "GitHub",
+		href: "https://github.com/wrigh4d",
+		Icon: GitHubIcon,
+	},
+	{
+		label: "Instagram",
+		href: "https://www.instagram.com/nick.wright.00/",
+		Icon: InstagramIcon,
+	},
+];
+
+const FooterStyles = styled.footer`
+	margin-top: 4rem;
+	padding: 3.5rem var(--section-padding-x) 2rem;
+	background-color: var(--surface);
+	border-top: 1px solid var(--border);
+
+	.footer__inner {
+		max-width: var(--max-width);
 		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
 	}
-	.col {
-		flex-direction: column;
-		color: white;
-		align-items: flex-start;
-	}
-	.col:last-child {
-		flex-direction: row;
-		justify-content: center;
-	}
-	.col:last-child span a {
-		font-size: 2.5rem;
-		margin-right: 0.5rem;
-		color: white;
-	}
-	.col a {
-		text-decoration: none;
-		color: white;
-		font-size: 1.5rem;
-		padding: 0.5rem;
-		font-weight: 300;
-		transition: 0.3s ease-in-out;
-	}
-	.col a:hover {
-		color: #000;
-		transform: scale(0.97);
-	}
-	.col h4 {
+
+	h3 {
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--text-secondary);
 		margin-bottom: 1rem;
 	}
-	@media only screen and (max-width: 768px) {
-		padding: 50px 0;
-		.row {
-			display: flex;
-			justify-content: flex-start;
-			flex-direction: column;
-		}
-		.col {
-			padding: 10px 20px;
-		}
+
+	.col a {
+		display: block;
+		width: fit-content;
+		padding: 0.3rem 0;
+		color: var(--text-primary);
+		text-decoration: none;
+		transition: color var(--transition);
+	}
+
+	.col a:hover {
+		color: var(--accent);
+	}
+
+	.socials {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.socials a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		color: var(--text-secondary);
+		transition: color var(--transition), border-color var(--transition);
+	}
+
+	.socials a:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+
+	.footer__bottom {
+		max-width: var(--max-width);
+		margin: 2.5rem auto 0;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--border);
+		text-align: center;
 	}
 `;
 
-const Footer = () => {
-	return (
-		<>
-			<ThemeProvider theme={theme}>
-				<FooterStyles>
-					<div className="row">
-						<div className="col d-flex">
-							<h4>INFORMATION</h4>
-							<a href="#home">HOME</a>
-							<a href="#about">ABOUT</a>
-							<a href="#projects">PROJECTS</a>
-						</div>
-						<div className="col d-flex">
-							<h4>USEFUL LINKS</h4>
-							<a href={pdf} target="_blank" rel="noreferrer">
-								DOWNLOAD RESUME
-							</a>
-						</div>
-						<div className="col d-flex">
-							<span>
-								<a href="https://www.linkedin.com/in/nick-wright12/">
-									<i className="bx bxl-linkedin-square" />
-								</a>
-							</span>
-							<span>
-								<a href="https://www.instagram.com/nick.wright.00/">
-									<i className="bx bxl-instagram-alt" />
-								</a>
-							</span>
-							<span>
-								<a href="https://github.com/wrigh4d">
-									<i className="bx bxl-github" />
-								</a>
-							</span>
-						</div>
-					</div>
-				</FooterStyles>
-			</ThemeProvider>
-		</>
-	);
-};
+const Footer = () => (
+	<FooterStyles>
+		<div className="footer__inner">
+			<div className="col">
+				<h3>Navigate</h3>
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#skills">Skills &amp; experience</a>
+				<a href="#contact">Contact</a>
+			</div>
+
+			<div className="col">
+				<h3>Links</h3>
+				<a href={resume} target="_blank" rel="noreferrer">
+					Download résumé
+				</a>
+				<a href="mailto:wrigh4d@cmich.edu">wrigh4d@cmich.edu</a>
+			</div>
+
+			<div className="col">
+				<h3>Elsewhere</h3>
+				<div className="socials">
+					{SOCIALS.map(({ label, href, Icon }) => (
+						<a
+							key={href}
+							href={href}
+							target="_blank"
+							rel="noreferrer"
+							aria-label={label}
+						>
+							<Icon />
+						</a>
+					))}
+				</div>
+			</div>
+		</div>
+
+		<div className="footer__bottom">
+			<Typography variant="body2" color="text.secondary">
+				© {new Date().getFullYear()} Nick Wright
+			</Typography>
+		</div>
+	</FooterStyles>
+);
 
 export default Footer;

@@ -1,5 +1,7 @@
 import React from "react";
+import { ThemeProvider } from "@mui/material/styles";
 import "./index.css";
+import theme from "./theme";
 
 // Components Imports
 import Navbar from "./components/Navbar";
@@ -12,15 +14,17 @@ import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<>
+		<ThemeProvider theme={theme}>
 			<Navbar />
-			<Main />
-			<About />
-			<Projects />
-			<Skills />
-			<Contact />
+			<main>
+				<Main />
+				<About />
+				<Projects />
+				<Skills />
+				<Contact />
+			</main>
 			<Footer />
-		</>
+		</ThemeProvider>
 	);
 }
 
