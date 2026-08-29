@@ -141,6 +141,71 @@ const SlimeSlayerArt = ({ tone, accent, highlight }) => (
 	</Scene>
 );
 
+const FantasyArt = ({ tone, accent, highlight }) => (
+	<Scene tone={tone}>
+		<defs>
+			<linearGradient id="ff-field" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0%" stopColor="#2a4a32" />
+				<stop offset="100%" stopColor={tone} />
+			</linearGradient>
+		</defs>
+		<rect x="80" y="70" width="640" height="360" rx="18" fill="url(#ff-field)" />
+		{[130, 190, 250, 310, 370].map((y) => (
+			<line
+				key={y}
+				x1="110"
+				x2="690"
+				y1={y}
+				y2={y}
+				stroke="#f4f1e4"
+				strokeOpacity="0.18"
+				strokeWidth="3"
+			/>
+		))}
+		<line x1="400" y1="70" x2="400" y2="430" stroke="#f4f1e4" strokeOpacity="0.28" strokeWidth="3" />
+		<g transform="translate(430,210)">
+			<ellipse cx="86" cy="78" rx="70" ry="52" fill="#1a2420" />
+			<ellipse cx="86" cy="70" rx="64" ry="48" fill="#245838" />
+			<rect x="78" y="22" width="16" height="28" rx="4" fill="#c9d4c4" />
+			<rect x="52" y="48" width="68" height="10" rx="3" fill="#c9d4c4" />
+			<rect x="46" y="62" width="80" height="8" rx="3" fill="#9aa89a" />
+			<rect x="50" y="78" width="72" height="8" rx="3" fill="#9aa89a" />
+		</g>
+		<g transform="translate(168,248)">
+			<ellipse cx="70" cy="58" rx="78" ry="48" fill="#6b3a1c" />
+			<ellipse cx="70" cy="52" rx="70" ry="42" fill="#8a4a24" />
+			<path
+				d="M18 52 C 40 38, 100 38, 122 52"
+				fill="none"
+				stroke="#e8d2b0"
+				strokeWidth="4"
+			/>
+			{[0, 1, 2, 3].map((i) => (
+				<line
+					key={i}
+					x1={48 + i * 12}
+					y1="40"
+					x2={48 + i * 12}
+					y2="64"
+					stroke="#e8d2b0"
+					strokeWidth="3"
+				/>
+			))}
+		</g>
+		<g transform="translate(300,150)">
+			<rect width="150" height="190" rx="8" fill="#d9c9a0" />
+			<rect x="10" y="10" width="130" height="170" rx="4" fill="#f4f1e4" />
+			<rect x="22" y="28" width="90" height="8" rx="4" fill={tone} opacity="0.45" />
+			<rect x="22" y="48" width="106" height="6" rx="3" fill="#2a332c" opacity="0.25" />
+			<rect x="22" y="64" width="96" height="6" rx="3" fill="#2a332c" opacity="0.25" />
+			<rect x="22" y="80" width="88" height="6" rx="3" fill="#2a332c" opacity="0.25" />
+			<rect x="22" y="110" width="70" height="6" rx="3" fill={accent} opacity="0.55" />
+			<rect x="54" y="148" width="50" height="10" rx="3" fill="#2a332c" opacity="0.35" />
+			<rect x="118" y="-8" width="22" height="36" rx="3" fill={highlight} />
+		</g>
+	</Scene>
+);
+
 const TaxiArt = ({ tone, accent, highlight }) => (
 	<Scene tone={tone}>
 		<defs>
@@ -179,66 +244,6 @@ const TaxiArt = ({ tone, accent, highlight }) => (
 	</Scene>
 );
 
-const MultimediaArt = ({ tone, accent, highlight }) => (
-	<Scene tone={tone}>
-		<defs>
-			<linearGradient id="mm-sky" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#f0c878" />
-				<stop offset="100%" stopColor={accent} />
-			</linearGradient>
-		</defs>
-		<ellipse cx="560" cy="300" rx="220" ry="160" fill={accent} opacity="0.12" />
-		<g transform="translate(250,80)">
-			<rect width="300" height="260" rx="18" fill="#2a3a38" />
-			<rect x="22" y="22" width="256" height="170" rx="8" fill="url(#mm-sky)" />
-			<polygon points="22,150 110,96 170,128 210,88 278,140 278,192 22,192" fill="#1a3a32" />
-			<circle cx="210" cy="64" r="16" fill="#f4f1e4" opacity="0.85" />
-			<rect x="40" y="210" width="220" height="18" rx="4" fill="#1a2422" />
-			<circle cx="150" cy="219" r="6" fill={accent} />
-		</g>
-		<g transform="translate(520,280)">
-			<circle r="70" fill="#1a2422" />
-			<circle r="54" fill="none" stroke={highlight} strokeWidth="14" />
-			<circle r="18" fill={tone} />
-			{[0, 60, 120, 180, 240, 300].map((deg) => (
-				<line
-					key={deg}
-					x1="0"
-					y1="0"
-					x2="54"
-					y2="0"
-					stroke={tone}
-					strokeWidth="4"
-					transform={`rotate(${deg})`}
-				/>
-			))}
-		</g>
-		<circle cx="180" cy="360" r="36" fill="#3d6b5c" opacity="0.7" />
-		<circle cx="150" cy="390" r="28" fill="#2a8a7e" opacity="0.6" />
-	</Scene>
-);
-
-const MoreArt = ({ tone, accent, highlight }) => (
-	<Scene tone={tone}>
-		<rect x="250" y="40" width="300" height="420" rx="36" fill="#243034" stroke={accent} strokeOpacity="0.55" strokeWidth="2" />
-		<rect x="278" y="68" width="244" height="160" rx="16" fill="#0e1416" />
-		<rect x="278" y="68" width="244" height="160" rx="16" fill={highlight} opacity="0.28" />
-		<circle cx="400" cy="130" r="36" fill={accent} opacity="0.7" />
-		<rect x="370" y="168" width="60" height="12" rx="6" fill="#f4f1e4" opacity="0.5" />
-		<rect x="300" y="252" width="200" height="14" rx="4" fill="#3a454c" />
-		<g fill="#2a3338">
-			{[0, 1, 2, 3].map((row) =>
-				[0, 1, 2, 3].map((col) => (
-					<circle key={`${row}-${col}`} cx={330 + col * 46} cy={300 + row * 36} r="10" />
-				))
-			)}
-		</g>
-		<circle cx="330" cy="300" r="10" fill={accent} />
-		<circle cx="468" cy="336" r="10" fill="#e07050" />
-		<circle cx="376" cy="372" r="10" fill={highlight} />
-	</Scene>
-);
-
 const GenericArt = ({ title, tone, accent, highlight }) => (
 	<Scene tone={tone}>
 		<circle cx="400" cy="250" r="160" fill={accent} opacity="0.15" />
@@ -258,13 +263,12 @@ const GenericArt = ({ title, tone, accent, highlight }) => (
 );
 
 const ART = {
+	"football-fantasy-manager": FantasyArt,
 	"uwm-flashcard": FlashcardArt,
 	pollinate: PollinateArt,
 	buffbud: BuffbudArt,
 	"slime-slayer": SlimeSlayerArt,
 	"crazy-taxi": TaxiArt,
-	"multimedia-design": MultimediaArt,
-	"more-projects": MoreArt,
 };
 
 const ProjectArt = ({ project }) => {

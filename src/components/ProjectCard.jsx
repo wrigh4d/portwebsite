@@ -150,11 +150,13 @@ const ProjectCard = ({ project }) => {
 				<p className="tagline">{project.tagline}</p>
 				<p className="description">{project.description}</p>
 
-				<ul className="tech">
-					{project.tech.map((item) => (
-						<li key={item}>{item}</li>
-					))}
-				</ul>
+				{project.tech?.length > 0 && (
+					<ul className="tech">
+						{project.tech.map((item) => (
+							<li key={item}>{item}</li>
+						))}
+					</ul>
+				)}
 
 				{project.href && (
 					<div className="action">
