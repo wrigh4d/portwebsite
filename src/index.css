@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700;800&display=swap");
 
 :root {
-	--g1: rgb(98, 0, 234);
-	--g2: rgb(236, 64, 122);
-}
+	--bg: #0b0d10;
+	--surface: #14171c;
+	--surface-raised: #1c2028;
+	--border: #282e38;
+	--text-primary: #e8eaed;
+	--text-secondary: #98a2b3;
+	--accent: #7aa2f7;
+	--accent-hover: #9ab8f9;
 
-body {
-	color: #f4f4f4;
-	user-select: none;
-	animation: background-pan 10s linear infinite;
-	background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
-	background-size: 200%;
-	height: 100vh;
-	overflow-x: hidden;
-	margin: 0px;
-}
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-lg: 16px;
 
-body,
-body * {
-	font-family: "Sofia Sans", sans-serif !important;
+	--section-padding-x: clamp(1.25rem, 8vw, 10rem);
+	--section-padding-y: clamp(3rem, 8vh, 6rem);
+	--max-width: 1200px;
+
+	--transition: 0.2s ease;
 }
 
 * {
@@ -27,17 +27,82 @@ body * {
 	box-sizing: border-box;
 }
 
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+#root > * {
+	min-width: 0;
+	max-width: 100%;
+}
+
+main {
+	flex: 1 0 auto;
+	width: 100%;
+}
+
 html,
 body {
 	scroll-behavior: smooth;
+	scroll-padding-top: 5.5rem;
 }
 
-@keyframes background-pan {
-	from {
-		background-position: 0% center;
+body {
+	min-height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
+	color: var(--text-primary);
+	background-color: var(--bg);
+	background-image: radial-gradient(
+			ellipse 80% 55% at 50% -10%,
+			rgba(122, 162, 247, 0.14),
+			transparent 70%
+		),
+		radial-gradient(
+			ellipse 60% 45% at 100% 100%,
+			rgba(122, 162, 247, 0.06),
+			transparent 70%
+		);
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Sofia Sans", system-ui, -apple-system, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: var(--radius-sm);
+}
+
+::selection {
+	background: rgba(122, 162, 247, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html,
+	body {
+		scroll-behavior: auto;
 	}
 
-	to {
-		background-position: -200% center;
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
 	}
 }

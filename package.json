@@ -1,38 +1,30 @@
 {
-  "name": "my-app",
-  "homepage": "http://nwrightport.com",
+  "name": "portfolio-website",
+  "homepage": "https://wrigh4d.github.io/portwebsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.3",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^9.4.0",
+    "@mui/material": "^9.4.0",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^8.5.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.4.1",
-    "react-router-dom": "^6.6.1",
+    "framer-motion": "^13.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^6.30.6",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "swiper": "^8.4.6",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^6.5.3",
+    "swiper": "^14.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "postbuild": "node -e \"require('fs').copyFileSync('build/index.html', 'build/404.html')\""
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

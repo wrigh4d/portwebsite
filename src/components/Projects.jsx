@@ -1,94 +1,34 @@
-import React, { useEffect } from "react";
-
-// Import libraries
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
-import { ThemeProvider } from "@emotion/react";
-import { Typography, useMediaQuery } from "@mui/material";
+import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 
-// Import Components
-import Carousel from "./Carousel";
-import MobileCarousel from "./MobileCarousel";
+import Section from "./Section";
+import ProjectCard from "./ProjectCard";
+import PROJECTS from "../data/projects";
 
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
+const GridStyles = styled.div`
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1.25rem;
 
-const ProjectsStyles = styled.div`
-	padding: 2.5rem 12rem;
-	text-align: center;
-	.header {
-		padding: 1rem;
-	}
-	@media only screen and (max-width: 768px) {
-		padding: 2.5rem 0;
+	@media only screen and (min-width: 768px) {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: 1.5rem;
 	}
 `;
 
-function ResponsiveLayout() {
-	const device = useMediaQuery("(min-width: 768px)");
-
-	const { ref, inView } = useInView({
-		threshold: 0.5,
-	});
-
-	const animation = useAnimation();
-
-	useEffect(() => {
-		if (inView) {
-			animation.start({
-				x: 0,
-				transition: {
-					type: "spring",
-					duration: 1.5,
-					bounce: 0.5,
-				},
-			});
-		}
-		if (!inView) {
-			animation.start({ x: "-100vw" });
-		}
-	}, [inView]);
-
-	if (device) {
-		return (
-			<>
-				<div className="header" ref={ref}>
-					<Typography variant="h1">PROJECTS</Typography>
-					<motion.div animate={animation}>
-						<Typography variant="h5">-SWIPE THROUGH MY WORK-</Typography>
-					</motion.div>
-					
-				</div>
-				<Carousel />
-			</>
-		);
-	} else
-		return (
-			<>
-				<div className="header" ref={ref}>
-					<Typography variant="h1">PROJECTS</Typography>
-					<motion.div animate={animation}>
-						<Typography variant="h6">-SWIPE THROUGH MY WORK-</Typography>
-					</motion.div>
-				</div>
-				<MobileCarousel />
-			</>
-		);
-}
-
-const Projects = () => {
-	return (
-		<ThemeProvider theme={theme}>
-			<ProjectsStyles id="projects">
-				<section>
-					<ResponsiveLayout />
-				</section>
-			</ProjectsStyles>
-		</ThemeProvider>
-	);
-};
+const Projects = () => (
+	<Section
+		id="projects"
+		eyebrow="Portfolio"
+		title="Projects"
+		subtitle="A selection of things I have designed, built and shipped."
+	>
+		<GridStyles>
+			{PROJECTS.map((project) => (
+				<ProjectCard key={project.id} project={project} />
+			))}
+		</GridStyles>
+	</Section>
+);
 
 export default Projects;

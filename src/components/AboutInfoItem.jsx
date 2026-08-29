@@ -1,62 +1,56 @@
 import React from "react";
 import styled from "styled-components";
+import { Typography } from "@mui/material";
 
 const AboutItemStyles = styled.div`
-	display: flex;
-	justify-content: flex-start;
-	margin-top: 1.5rem;
-	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+	gap: 1.5rem;
+	padding: 1.25rem 0;
+	border-top: 1px solid var(--border);
+
 	.title {
-		display: flex;
-		width: 100%;
-		max-width: 20%;
-		font-size: 2.4rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--text-secondary);
 	}
+
 	.items {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
+		gap: 0.5rem;
 	}
+
 	.item {
-		background-color: #2a2a2a;
-		padding: 0.9rem;
-		border-radius: 8px;
+		padding: 0.45rem 0.85rem;
+		font-size: 0.95rem;
+		list-style: none;
+		background-color: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
 	}
+
 	@media only screen and (max-width: 768px) {
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.2rem;
-		.items {
-			display: flex;
-			flex-wrap: wrap;
-			position: initial;
-			gap: 1rem;
-		}
-		.item {
-			font-size: 1rem;
-		}
-		.title {
-			width: 100%;
-			max-width: 100%;
-			font-size: 1.6rem;
-		}
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
 	}
 `;
 
-export default function AboutInfoItem({
-	title = "",
-	items = [],
-}) {
+export default function AboutInfoItem({ title = "", items = [] }) {
 	return (
 		<AboutItemStyles>
-			<p className="title">{title}</p>
-			<div className="items">
-				{items.map((item, index) => (
-					<div className="item" key={index}>
-						<p>{item}</p>
-					</div>
+			<Typography component="h4" className="title">
+				{title}
+			</Typography>
+			<ul className="items">
+				{items.map((item) => (
+					<li className="item" key={item}>
+						{item}
+					</li>
 				))}
-			</div>
+			</ul>
 		</AboutItemStyles>
 	);
 }

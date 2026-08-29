@@ -1,131 +1,113 @@
 <a name="readme-top"></a>
 
-
-
-<!-- PROJECT SHIELDS -->
-[![Stargazers][stars-shield]](https://github.com/wrigh4d/portwebsite/stargazers)
-[![Issues][issues-shield]](https://github.com/wrigh4d/portwebsite/issues)
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/nick-wright12/)
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
-  <a href="https://github.com/wrigh4d/portwebsite">
-    <img src="src/images/logoblack.webp" alt="Logo" width="80" height="80">
-  </a>
 
-<h1 align="center">Portfolio Website</h1>
+# Portfolio Website
 
-  <p align="center">
-    This website contains several sections including projects, relevant courses and much more information that defines who I am. This is continuios project that I plan to constantly update with new projects and other materials. 
-    <br />
-    If you have any further questions, please feel free to contact me at: wrigh4d@cmich.edu
-    <br />
-    <a href="https://github.com/wrigh4d/portwebsite"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://www.nwrightport.com">View Website</a>
-    ·
-    <a href="https://github.com/wrigh4d/portwebsite/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/wrigh4d/portwebsite/issues">Request Feature</a>
-  </p>
+Personal portfolio for **Nick Wright** - software developer at United Wholesale Mortgage.
+
+[![Stars](https://img.shields.io/github/stars/wrigh4d/portwebsite.svg?style=for-the-badge)](https://github.com/wrigh4d/portwebsite/stargazers)
+[![Issues](https://img.shields.io/github/issues/wrigh4d/portwebsite.svg?style=for-the-badge)](https://github.com/wrigh4d/portwebsite/issues)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://www.linkedin.com/in/nick-wright12/)
+
+[View the site](https://www.nwrightport.com) · [Report a bug](https://github.com/wrigh4d/portwebsite/issues) · [Request a feature](https://github.com/wrigh4d/portwebsite/issues)
+
+<img src="src/images/screenshot.webp" alt="Screenshot of the portfolio website" width="100%">
+
 </div>
 
+## About
 
+A single-page React site covering who I am, the projects I've built, my skills and
+experience, and a contact form. It's a continuous project that I update as new work
+ships.
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+**Built with:** React 18 (Create React App), MUI, styled-components, Framer Motion,
+Swiper and EmailJS.
 
+## Getting started
 
+```bash
+git clone https://github.com/wrigh4d/portwebsite.git
+cd portwebsite
+npm install
+npm start
+```
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+The dev server runs at <http://localhost:3000>.
 
-<a href="https://www.nwrightport.com">
-    <img src="src/images/screenshot.webp" alt="Logo" width="100%">
-  </a>
+### Environment variables
 
-<h1>WRITE GENERAL INFORMATION HERE</h1>
+The contact form uses EmailJS. Defaults are compiled in, but you can override them:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```bash
+cp .env.example .env.local
+```
 
+| Variable                          | Description                     |
+| --------------------------------- | ------------------------------- |
+| `REACT_APP_EMAILJS_SERVICE_ID`    | EmailJS service identifier      |
+| `REACT_APP_EMAILJS_TEMPLATE_ID`   | EmailJS template identifier     |
+| `REACT_APP_EMAILJS_PUBLIC_KEY`    | EmailJS public (browser) key    |
 
+These are browser-visible values, not secrets.
 
-### Built With
+### Scripts
 
-* [![React][React.js]][React-url]
+| Command         | Description                            |
+| --------------- | -------------------------------------- |
+| `npm start`     | Start the development server           |
+| `npm run build` | Produce a production build in `build/` |
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Hosting (GitHub Pages)
 
+The site deploys automatically when `main` is updated. After the first time, the live URL is
+[https://wrigh4d.github.io/portwebsite](https://wrigh4d.github.io/portwebsite).
 
+**One-time GitHub setting:** repo **Settings → Pages → Source → GitHub Actions**.
 
-<!-- USAGE EXAMPLES -->
-## Usage
+A post at slug `starting-a-notebook` is then
+`https://wrigh4d.github.io/portwebsite/blog/starting-a-notebook`. Refreshing that URL works
+because the build copies `index.html` to `404.html`, which GitHub Pages serves for unknown paths.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To use a custom domain later (for example `nwrightport.com`):
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Add the domain under **Settings → Pages → Custom domain**.
+2. Point DNS at GitHub Pages.
+3. Change `homepage` in `package.json` to `https://your-domain.com` and push so asset paths sit at the root.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Project structure
 
+```
+public/            Static assets, HTML shell, manifest, robots.txt
+src/
+  theme.js         Single source of truth for the MUI theme + design tokens
+  index.css        CSS custom properties, resets and global styles
+  data/            Content data (projects)
+  components/      One component per section, plus shared Section wrapper
+  images/          Images (webp) and résumé PDF
+```
 
+### Theming
 
-<!-- ROADMAP -->
+All colour, radius and spacing values live in two places that stay in sync:
+
+- `src/index.css` - CSS custom properties used by styled-components.
+- `src/theme.js` - the MUI theme (`tokens` export mirrors the CSS variables).
+
+Components never hardcode colours; they reference `var(--token)` or the MUI palette.
+
 ## Roadmap
 
-- [ ] Add Blog Page
-    - [ ] Create Blogs on Projects
-- [ ] Add More Projects
-- [ ] General To Do:
-    - [ ] Edit About Me Section
-    - [ ] Add Github to Projects
-    - [ ] Clear Contact Info
+- [x] Add a blog section with project write-ups
+- [ ] Add more projects
+- [ ] Migrate off the deprecated `react-scripts` toolchain (Vite)
+- [ ] Add light-mode support
 
-See the [open issues](https://github.com/wrigh4d/portwebsite/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/wrigh4d/portwebsite/issues) for the full list.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- CONTACT -->
 ## Contact
 
-Nick Wright - wrigh4d@cmich.edu
-
-Project Link: [https://github.com/wrigh4d/portwebsite](https://www.nwrightport.com)
+Nick Wright - <wrigh4d@cmich.edu> · [nwrightport.com](https://www.nwrightport.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
