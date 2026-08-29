@@ -4,7 +4,7 @@ import { Button, Typography } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, Navigation, Pagination } from "swiper";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";

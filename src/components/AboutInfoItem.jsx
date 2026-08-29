@@ -26,6 +26,7 @@ const AboutItemStyles = styled.div`
 	.item {
 		padding: 0.45rem 0.85rem;
 		font-size: 0.95rem;
+		list-style: none;
 		background-color: var(--surface);
 		border: 1px solid var(--border);
 		border-radius: var(--radius-sm);
