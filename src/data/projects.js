@@ -1,5 +1,19 @@
 const PROJECTS = [
 	{
+		id: "football-fantasy-manager",
+		title: "Football Fantasy Manager",
+		tagline: "Single-season dynasty",
+		category: "Side project",
+		description:
+			"A single-season dynasty style fantasy football project. Users create leagues and manage a roster through contracts across the summer. It keeps the parts of dynasty that are worth it - long-term team building and hard contract calls - and drops the multi-season grind that burns leagues out. This is a deeper take on the original, built to feel like running a franchise for one focused season.",
+		tech: ["Flutter", "C#", "SQLite"],
+		href: "https://github.com/KirkDWilliams/Football-GM",
+		linkLabel: "View on GitHub",
+		tone: "#1a2a1c",
+		accent: "#8fbf6a",
+		highlight: "#e8c44a",
+	},
+	{
 		id: "uwm-flashcard",
 		title: "UWM Flashcard",
 		tagline: "Single-page web application",
@@ -68,35 +82,6 @@ const PROJECTS = [
 		tone: "#2a1616",
 		accent: "#f0c040",
 		highlight: "#7ec8c0",
-	},
-	{
-		id: "multimedia-design",
-		title: "Multimedia Design",
-		tagline: "Design minor",
-		category: "Design",
-		description:
-			"I added a multimedia design minor to push into graphic design, photography, video production, web, and games. Along the way I shot over a thousand photos, produced videos on professional equipment, built games, explored logo design, and made this site - a creative practice kept next to engineering.",
-		tech: ["Illustrator", "InDesign", "Photoshop", "Photo Mechanic"],
-		href: "https://github.com/wrigh4d/portwebsite",
-		linkLabel: "View this site on GitHub",
-		tone: "#102824",
-		accent: "#3dcfb6",
-		highlight: "#e8c050",
-	},
-	{
-		id: "more-projects",
-		title: "Other CPS projects",
-		tagline: "Coursework that added up",
-		category: "Coursework",
-		description:
-			"Calculators in Java, systems work in C, a chat room, a terminal in assembly - the smaller projects that built the problem-solving habits I still use. Not every one is worth its own card, but together they are the foundation.",
-		tech: ["Java", "C", "C#", "Assembly", "HTML", "CSS", "JavaScript"],
-		href: null,
-		linkLabel: null,
-		wide: true,
-		tone: "#161c1e",
-		accent: "#7aa2f7",
-		highlight: "#8fbfa8",
 	},
 ];
 
