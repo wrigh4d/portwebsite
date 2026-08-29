@@ -4,7 +4,7 @@
 
 # Portfolio Website
 
-Personal portfolio for **Nick Wright** — software developer at United Wholesale Mortgage.
+Personal portfolio for **Nick Wright** - software developer at United Wholesale Mortgage.
 
 [![Stars](https://img.shields.io/github/stars/wrigh4d/portwebsite.svg?style=for-the-badge)](https://github.com/wrigh4d/portwebsite/stargazers)
 [![Issues](https://img.shields.io/github/issues/wrigh4d/portwebsite.svg?style=for-the-badge)](https://github.com/wrigh4d/portwebsite/issues)
@@ -75,8 +75,8 @@ src/
 
 All colour, radius and spacing values live in two places that stay in sync:
 
-- `src/index.css` — CSS custom properties used by styled-components.
-- `src/theme.js` — the MUI theme (`tokens` export mirrors the CSS variables).
+- `src/index.css` - CSS custom properties used by styled-components.
+- `src/theme.js` - the MUI theme (`tokens` export mirrors the CSS variables).
 
 Components never hardcode colours; they reference `var(--token)` or the MUI palette.
 
@@ -91,6 +91,6 @@ See the [open issues](https://github.com/wrigh4d/portwebsite/issues) for the ful
 
 ## Contact
 
-Nick Wright — <wrigh4d@cmich.edu> · [nwrightport.com](https://www.nwrightport.com)
+Nick Wright - <wrigh4d@cmich.edu> · [nwrightport.com](https://www.nwrightport.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

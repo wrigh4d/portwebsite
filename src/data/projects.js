@@ -1,81 +1,102 @@
-import uwm from "../images/uwm.webp";
-import uwmMobile from "../images/uwmMobile.webp";
-import pollinate from "../images/pollinate.webp";
-import pollinateMobile from "../images/pollinateMobile.webp";
-import buffbud from "../images/buffbud.webp";
-import buffbudMobile from "../images/buffbudMobile.webp";
-import mage from "../images/mage.webp";
-import mageMobile from "../images/mageMobile.webp";
-import taxi from "../images/taxi.webp";
-import taxiMobile from "../images/taxiMobile.webp";
-import mmd from "../images/mmd.webp";
-import mmdMobile from "../images/mmdMobile.webp";
-import projects from "../images/projects.webp";
-import projectsMobile from "../images/projectsMobile.webp";
-
 const PROJECTS = [
 	{
 		id: "uwm-flashcard",
 		title: "UWM Flashcard",
-		alt: "Screenshot of the UWM Flashcard study application",
-		image: uwm,
-		mobileImage: uwmMobile,
+		tagline: "Single-page web application",
+		category: "Web app",
+		description:
+			"A summer intern project at United Wholesale Mortgage in 2022. Over ten weeks our team built an interactive site so executives could learn about people across the company, backed by an API and a database of every team member. It was a crash course in the software development cycle and the roles inside it.",
+		tech: ["React", "JavaScript", "MUI", "C#", "SQL", "Docker", "Vault", ".NET Core"],
 		href: "https://github.com/wrigh4d/UWMFlashcard",
 		linkLabel: "View on GitHub",
+		tone: "#1c2e28",
+		accent: "#8fbfa8",
+		highlight: "#e8c4a8",
 	},
 	{
 		id: "pollinate",
 		title: "Pollinate",
-		alt: "Screenshot of the Pollinate polling website",
-		image: pollinate,
-		mobileImage: pollinateMobile,
+		tagline: "Polling site with API & database",
+		category: "Senior project",
+		description:
+			"A single-page app for creating public or private polls and sharing them online. As a full-stack developer on my senior project team I worked on the UI, API, and database. We ran a proper SDLC with user stories, a backlog, daily standups, and sprint reviews.",
+		tech: ["C#", ".NET", "PostgreSQL", "React", "JavaScript", "HTML", "CSS", "Netlify"],
 		href: "https://github.com/wrigh4d/PollingWebsite",
 		linkLabel: "View on GitHub",
+		tone: "#222820",
+		accent: "#c9d4a8",
+		highlight: "#f0d84a",
 	},
 	{
 		id: "buffbud",
 		title: "Buffbud",
-		alt: "Screenshot of the Buffbud fitness application",
-		image: buffbud,
-		mobileImage: buffbudMobile,
+		tagline: "Tamagotchi-style exercise app",
+		category: "Mobile app",
+		description:
+			"My first big group computer science project: a Tamagotchi-style exercise companion for mobile. We drew pixel-art pets in GIMP that users could pick as workout partners. Throughout the day the app nudged you to walk the pet or finish a random exercise; completing daily workouts earned food to feed it.",
+		tech: ["Java", "JavaFX", "GIMP", "Sprite animation"],
 		href: "https://github.com/wrigh4d/Buffbud",
 		linkLabel: "View on GitHub",
+		tone: "#2a2228",
+		accent: "#4ec9a8",
+		highlight: "#f0c060",
 	},
 	{
 		id: "slime-slayer",
 		title: "Slime Slayer",
-		alt: "Key art for the Slime Slayer game",
-		image: mage,
-		mobileImage: mageMobile,
+		tagline: "Isometric RPG",
+		category: "Game",
+		description:
+			"A 2D isometric RPG I built as a college final. I challenged myself to create every asset and the whole world without the Unity Asset Store - mostly in Photoshop and Aseprite - and wrote every script from scratch. Art and code, start to finish, just me.",
+		tech: ["C#", "Unity", "Photoshop", "Aseprite"],
 		href: "https://nickwright.itch.io/slime-slayer",
-		linkLabel: "Download the game",
+		linkLabel: "Play on itch.io",
+		tone: "#2a1214",
+		accent: "#e07050",
+		highlight: "#6ec8ff",
 	},
 	{
 		id: "crazy-taxi",
 		title: "Crazy Taxi",
-		alt: "Key art for the Crazy Taxi game",
-		image: taxi,
-		mobileImage: taxiMobile,
+		tagline: "Arcade desktop racer",
+		category: "Game",
+		description:
+			"A term project for Advanced Multimedia Design: a modern take on the 1999 arcade racer I grew up playing. I built the map in Unity, modeled assets in SketchUp and Blender, and wrote the mechanics. Drive passengers to their destinations, hit minigames, and finish races to rack up score.",
+		tech: ["Unity", "C#", "SketchUp", "Blender"],
 		href: "https://nickwright.itch.io/crazy-taxi",
-		linkLabel: "Download the game",
+		linkLabel: "Play on itch.io",
+		tone: "#2a1616",
+		accent: "#f0c040",
+		highlight: "#7ec8c0",
 	},
 	{
 		id: "multimedia-design",
-		title: "Multimedia Design Work",
-		alt: "Collage of multimedia design work",
-		image: mmd,
-		mobileImage: mmdMobile,
+		title: "Multimedia Design",
+		tagline: "Design minor",
+		category: "Design",
+		description:
+			"I added a multimedia design minor to push into graphic design, photography, video production, web, and games. Along the way I shot over a thousand photos, produced videos on professional equipment, built games, explored logo design, and made this site - a creative practice kept next to engineering.",
+		tech: ["Illustrator", "InDesign", "Photoshop", "Photo Mechanic"],
 		href: "https://github.com/wrigh4d/portwebsite",
-		linkLabel: "View on GitHub",
+		linkLabel: "View this site on GitHub",
+		tone: "#102824",
+		accent: "#3dcfb6",
+		highlight: "#e8c050",
 	},
 	{
 		id: "more-projects",
-		title: "More Projects",
-		alt: "Overview of additional projects",
-		image: projects,
-		mobileImage: projectsMobile,
+		title: "Other CPS projects",
+		tagline: "Coursework that added up",
+		category: "Coursework",
+		description:
+			"Calculators in Java, systems work in C, a chat room, a terminal in assembly - the smaller projects that built the problem-solving habits I still use. Not every one is worth its own card, but together they are the foundation.",
+		tech: ["Java", "C", "C#", "Assembly", "HTML", "CSS", "JavaScript"],
 		href: null,
 		linkLabel: null,
+		wide: true,
+		tone: "#161c1e",
+		accent: "#7aa2f7",
+		highlight: "#8fbfa8",
 	},
 ];
 

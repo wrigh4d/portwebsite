@@ -8,7 +8,7 @@ import AboutInfoItem from "./AboutInfoItem";
 
 const EXPERIENCE = [
 	{
-		title: "2023 — Now",
+		title: "2023 - Now",
 		items: ["Software Developer at United Wholesale Mortgage"],
 	},
 	{
@@ -16,11 +16,11 @@ const EXPERIENCE = [
 		items: ["Software Developer Intern at United Wholesale Mortgage"],
 	},
 	{
-		title: "2021 — 2023",
+		title: "2021 - 2023",
 		items: ["Research Librarian Assistant at Central Michigan University"],
 	},
 	{
-		title: "2018 — 2019",
+		title: "2018 - 2019",
 		items: ["Kid's Camp Counselor at YMCA of Lansing"],
 	},
 ];
@@ -37,7 +37,7 @@ const SKILLS = [
 const EDUCATION = [
 	{
 		title: "College",
-		items: ["Central Michigan University — Mount Pleasant, MI"],
+		items: ["Central Michigan University - Mount Pleasant, MI"],
 	},
 ];
 
@@ -45,38 +45,38 @@ const COURSES = [
 	{
 		title: "Computer science",
 		items: [
-			"CPS 180 — Principles of Computer Programming",
-			"CPS 181 — Introduction to Data Structures",
-			"CPS 210 — Computer Organization and Communications",
-			"CPS 240 — Object-Oriented Programming, Analysis and Design",
-			"CPS 282 — Intro to Multimedia Design",
-			"CPS 340 — Advanced Data Structures and Algorithms",
-			"CPS 360 — Computer Design & Architecture",
-			"CPS 382 — Advanced Multimedia Design",
-			"CPS 395 — Internship in Computer Science",
-			"CPS 410 — Senior Design I",
-			"CPS 450 — Programming Language Concepts",
-			"CPS 470 — Introduction to Operating Systems",
-			"CPS 498 — Senior Design II",
+			"CPS 180 - Principles of Computer Programming",
+			"CPS 181 - Introduction to Data Structures",
+			"CPS 210 - Computer Organization and Communications",
+			"CPS 240 - Object-Oriented Programming, Analysis and Design",
+			"CPS 282 - Intro to Multimedia Design",
+			"CPS 340 - Advanced Data Structures and Algorithms",
+			"CPS 360 - Computer Design & Architecture",
+			"CPS 382 - Advanced Multimedia Design",
+			"CPS 395 - Internship in Computer Science",
+			"CPS 410 - Senior Design I",
+			"CPS 450 - Programming Language Concepts",
+			"CPS 470 - Introduction to Operating Systems",
+			"CPS 498 - Senior Design II",
 		],
 	},
 	{
 		title: "Information technology",
 		items: [
-			"ITC 190 — Computer Hardware, Concepts & Install",
-			"ITC 320 — Web App Development, Client-Side Script",
-			"ITC 341 — Intro to Databases and Applications",
-			"ITC 383 — Video Game Design",
+			"ITC 190 - Computer Hardware, Concepts & Install",
+			"ITC 320 - Web App Development, Client-Side Script",
+			"ITC 341 - Intro to Databases and Applications",
+			"ITC 383 - Video Game Design",
 		],
 	},
 	{
 		title: "Multimedia design",
 		items: [
-			"ART 231 — Introduction to Graphic Design",
-			"ART 235 — Logo and Identity Design",
-			"BCA 223 — Video Production",
-			"JRN 220 — Basic Media Photography",
-			"MMD 495 — Multimedia Design Capstone",
+			"ART 231 - Introduction to Graphic Design",
+			"ART 235 - Logo and Identity Design",
+			"BCA 223 - Video Production",
+			"JRN 220 - Basic Media Photography",
+			"MMD 495 - Multimedia Design Capstone",
 		],
 	},
 ];

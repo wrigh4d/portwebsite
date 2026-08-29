@@ -10,19 +10,21 @@ import about1 from "../images/about1.webp";
 import about2 from "../images/about2.webp";
 import about3 from "../images/about3.webp";
 import about4 from "../images/about4.webp";
-import about5 from "../images/about5.webp";
 
 const PHOTOS = [
-	{ src: about1, alt: "Nick Wright travelling in a national park" },
-	{ src: about5, alt: "Nick Wright outdoors on a hike" },
-	{ src: about2, alt: "Nick Wright with friends" },
-	{ src: about3, alt: "A landscape photograph taken by Nick Wright" },
-	{ src: about4, alt: "Nick Wright exploring a new city" },
+	{ src: about1, alt: "Family photo in Las Vegas" },
+	{ src: about2, alt: "Sister's graduation at Michigan State University" },
+	{ src: about3, alt: "Photo with friends" },
+	{ src: about4, alt: "Family photo" }
 ];
 
 const CarouselStyles = styled.div`
+	min-width: 0;
+	overflow: hidden;
+
 	.mySwiper {
 		width: 100%;
+		max-width: 100%;
 		padding-bottom: 2.5rem;
 	}
 
