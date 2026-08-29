@@ -7,6 +7,8 @@ const SectionStyles = styled.section`
 
 	.section__inner {
 		max-width: var(--max-width);
+		width: 100%;
+		min-width: 0;
 		margin: 0 auto;
 	}
 
@@ -27,8 +29,9 @@ const SectionStyles = styled.section`
 
 	.section__subtitle {
 		margin-top: 0.75rem;
-		max-width: 60ch;
+		max-width: min(60ch, 100%);
 		margin-inline: auto;
+		overflow-wrap: break-word;
 	}
 `;
 

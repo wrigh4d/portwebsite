@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -35,7 +36,7 @@ const FooterStyles = styled.footer`
 		max-width: var(--max-width);
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
 		gap: 2rem;
 	}
 
@@ -59,6 +60,13 @@ const FooterStyles = styled.footer`
 
 	.col a:hover {
 		color: var(--accent);
+	}
+
+	.col .nav-divider {
+		width: 2rem;
+		height: 1px;
+		margin: 0.65rem 0;
+		background-color: var(--border);
 	}
 
 	.socials {
@@ -97,11 +105,13 @@ const Footer = () => (
 		<div className="footer__inner">
 			<div className="col">
 				<h3>Navigate</h3>
-				<a href="#home">Home</a>
-				<a href="#about">About</a>
-				<a href="#projects">Projects</a>
-				<a href="#skills">Skills &amp; experience</a>
-				<a href="#contact">Contact</a>
+				<Link to="/#home">Home</Link>
+				<Link to="/#about">About</Link>
+				<Link to="/#projects">Projects</Link>
+				<Link to="/#skills">Skills &amp; experience</Link>
+				<Link to="/#contact">Contact</Link>
+				<div className="nav-divider" role="separator" aria-hidden="true" />
+				<Link to="/blog">Blog</Link>
 			</div>
 
 			<div className="col">

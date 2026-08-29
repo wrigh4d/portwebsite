@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website",
-  "homepage": "http://nwrightport.com",
+  "homepage": "https://wrigh4d.github.io/portwebsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,13 +12,15 @@
     "framer-motion": "^13.1.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-router-dom": "^6.30.6",
     "react-scripts": "5.0.1",
     "styled-components": "^6.5.3",
     "swiper": "^14.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "postbuild": "node -e \"require('fs').copyFileSync('build/index.html', 'build/404.html')\""
   },
   "eslintConfig": {
     "extends": [
