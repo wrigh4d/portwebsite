@@ -1,5 +1,19 @@
 const PROJECTS = [
 	{
+		id: "family-book-club",
+		title: "Family Book Club",
+		tagline: "Pick a book they'll actually read",
+		category: "Side project",
+		description:
+			"A phone-friendly site I built for my family's book club. Share a link, join with a name and a club code, keep a standing shortlist, and present when you meet so everyone sees the same current book and next-book options. Recs are computed from that cycle's genre votes and past ratings, then frozen for the meeting—so the next pick is something the group will actually finish.",
+		tech: ["React", "TypeScript", "Vite", "Tailwind", "Firebase", "Open Library"],
+		href: "https://wrigh4d.github.io/family-book-club/",
+		linkLabel: "Visit the site",
+		tone: "#241c16",
+		accent: "#c47868",
+		highlight: "#d4b06a",
+	},
+	{
 		id: "football-fantasy-manager",
 		title: "Football Fantasy Manager",
 		tagline: "Single-season dynasty",
@@ -12,34 +26,6 @@ const PROJECTS = [
 		tone: "#1a2a1c",
 		accent: "#8fbf6a",
 		highlight: "#e8c44a",
-	},
-	{
-		id: "uwm-flashcard",
-		title: "UWM Flashcard",
-		tagline: "Single-page web application",
-		category: "Web app",
-		description:
-			"A summer intern project at United Wholesale Mortgage in 2022. Over ten weeks our team built an interactive site so executives could learn about people across the company, backed by an API and a database of every team member. It was a crash course in the software development cycle and the roles inside it.",
-		tech: ["React", "JavaScript", "MUI", "C#", "SQL", "Docker", "Vault", ".NET Core"],
-		href: "https://github.com/wrigh4d/UWMFlashcard",
-		linkLabel: "View on GitHub",
-		tone: "#1c2e28",
-		accent: "#8fbfa8",
-		highlight: "#e8c4a8",
-	},
-	{
-		id: "pollinate",
-		title: "Pollinate",
-		tagline: "Polling site with API & database",
-		category: "Senior project",
-		description:
-			"A single-page app for creating public or private polls and sharing them online. As a full-stack developer on my senior project team I worked on the UI, API, and database. We ran a proper SDLC with user stories, a backlog, daily standups, and sprint reviews.",
-		tech: ["C#", ".NET", "PostgreSQL", "React", "JavaScript", "HTML", "CSS", "Netlify"],
-		href: "https://github.com/wrigh4d/PollingWebsite",
-		linkLabel: "View on GitHub",
-		tone: "#222820",
-		accent: "#c9d4a8",
-		highlight: "#f0d84a",
 	},
 	{
 		id: "buffbud",
@@ -68,20 +54,6 @@ const PROJECTS = [
 		tone: "#2a1214",
 		accent: "#e07050",
 		highlight: "#6ec8ff",
-	},
-	{
-		id: "crazy-taxi",
-		title: "Crazy Taxi",
-		tagline: "Arcade desktop racer",
-		category: "Game",
-		description:
-			"A term project for Advanced Multimedia Design: a modern take on the 1999 arcade racer I grew up playing. I built the map in Unity, modeled assets in SketchUp and Blender, and wrote the mechanics. Drive passengers to their destinations, hit minigames, and finish races to rack up score.",
-		tech: ["Unity", "C#", "SketchUp", "Blender"],
-		href: "https://nickwright.itch.io/crazy-taxi",
-		linkLabel: "Play on itch.io",
-		tone: "#2a1616",
-		accent: "#f0c040",
-		highlight: "#7ec8c0",
 	},
 ];
 
