@@ -7,76 +7,71 @@ const Scene = ({ tone, children }) => (
 	</svg>
 );
 
-const FlashcardArt = ({ tone, accent, highlight }) => (
+const FamilyBookClubArt = ({ tone, accent, highlight }) => (
 	<Scene tone={tone}>
 		<defs>
-			<linearGradient id="fc-glow" x1="0" y1="0" x2="1" y2="1">
-				<stop offset="0%" stopColor={accent} stopOpacity="0.35" />
+			<linearGradient id="fbc-glow" x1="0.2" y1="0" x2="1" y2="1">
+				<stop offset="0%" stopColor={highlight} stopOpacity="0.45" />
 				<stop offset="100%" stopColor={tone} stopOpacity="0" />
 			</linearGradient>
-			<linearGradient id="fc-portrait" x1="0" y1="0" x2="1" y2="1">
-				<stop offset="0%" stopColor={highlight} />
-				<stop offset="100%" stopColor={accent} />
+			<linearGradient id="fbc-page" x1="0" y1="0" x2="1" y2="1">
+				<stop offset="0%" stopColor="#fff6ea" />
+				<stop offset="100%" stopColor="#e8d7bc" />
 			</linearGradient>
+			<linearGradient id="fbc-table" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0%" stopColor="#5a3d2a" />
+				<stop offset="100%" stopColor="#3a2418" />
+			</linearGradient>
+			<radialGradient id="fbc-lamp" cx="0.5" cy="0.15" r="0.9">
+				<stop offset="0%" stopColor={highlight} stopOpacity="0.7" />
+				<stop offset="100%" stopColor={highlight} stopOpacity="0" />
+			</radialGradient>
 		</defs>
-		<ellipse cx="520" cy="80" rx="280" ry="180" fill="url(#fc-glow)" />
-		<g transform="translate(150,90) rotate(-10)">
-			<rect width="200" height="260" rx="22" fill="#1a2422" stroke={accent} strokeOpacity="0.35" />
-			<rect x="16" y="16" width="168" height="168" rx="14" fill="#243330" />
-			<circle cx="100" cy="88" r="36" fill={accent} opacity="0.55" />
-			<ellipse cx="100" cy="150" rx="48" ry="28" fill={accent} opacity="0.35" />
+		<ellipse cx="560" cy="70" rx="260" ry="170" fill="url(#fbc-glow)" />
+		<ellipse cx="640" cy="180" rx="160" ry="160" fill="url(#fbc-lamp)" />
+		<rect x="78" y="70" width="52" height="218" rx="4" fill="#5c211b" />
+		<rect x="138" y="48" width="44" height="240" rx="4" fill={accent} />
+		<rect x="190" y="92" width="40" height="196" rx="4" fill="#4d5b43" />
+		<rect x="238" y="62" width="48" height="226" rx="4" fill="#b0894f" />
+		<rect x="78" y="70" width="8" height="218" fill="#f3e4d2" opacity="0.18" />
+		<rect x="138" y="48" width="7" height="240" fill="#f3e4d2" opacity="0.18" />
+		<rect x="190" y="92" width="6" height="196" fill="#f3e4d2" opacity="0.18" />
+		<rect x="238" y="62" width="8" height="226" fill="#f3e4d2" opacity="0.18" />
+		<g transform="translate(348,158)">
+			<circle cx="0" cy="18" r="28" fill="#f3d7c4" />
+			<ellipse cx="0" cy="78" rx="42" ry="36" fill={accent} />
+			<circle cx="92" cy="0" r="32" fill="#e8c4a8" />
+			<ellipse cx="92" cy="68" rx="50" ry="40" fill="#7a2e24" />
+			<circle cx="188" cy="22" r="26" fill="#f0d2b4" />
+			<ellipse cx="188" cy="78" rx="40" ry="34" fill="#4d5b43" />
 		</g>
-		<g transform="translate(460,70) rotate(9)">
-			<rect width="200" height="260" rx="22" fill="#1a2422" stroke={accent} strokeOpacity="0.35" />
-			<rect x="16" y="16" width="168" height="168" rx="14" fill="#243330" />
-			<circle cx="100" cy="88" r="36" fill={highlight} opacity="0.55" />
-			<ellipse cx="100" cy="150" rx="48" ry="28" fill={highlight} opacity="0.35" />
+		<rect x="70" y="288" width="660" height="160" rx="18" fill="url(#fbc-table)" />
+		<rect x="70" y="288" width="660" height="18" rx="8" fill="#6b4a32" />
+		<g transform="translate(612,158)">
+			<rect x="46" y="86" width="14" height="44" rx="4" fill="#2a1c14" />
+			<ellipse cx="53" cy="80" rx="38" ry="12" fill={highlight} opacity="0.85" />
+			<ellipse cx="53" cy="72" rx="22" ry="8" fill="#f4e4c4" />
+			<rect x="46" y="78" width="14" height="12" fill="#c9a56a" />
 		</g>
-		<g transform="translate(300,55)">
-			<rect width="220" height="290" rx="24" fill="#24382f" stroke={accent} strokeWidth="2" />
-			<rect x="16" y="16" width="188" height="188" rx="16" fill="url(#fc-portrait)" />
-			<circle cx="110" cy="96" r="42" fill={tone} opacity="0.35" />
-			<circle cx="110" cy="88" r="28" fill="#f3e4d2" />
-			<ellipse cx="110" cy="168" rx="58" ry="34" fill="#3d6b5c" />
-			<rect x="28" y="224" width="120" height="10" rx="5" fill={accent} opacity="0.5" />
-			<rect x="28" y="246" width="80" height="8" rx="4" fill={accent} opacity="0.3" />
+		<g transform="translate(118,318)">
+			<rect width="118" height="18" rx="3" fill="#4d5b43" />
+			<rect y="18" width="118" height="18" rx="3" fill={accent} />
+			<rect y="36" width="118" height="18" rx="3" fill="#b0894f" />
+			<rect y="54" width="118" height="16" rx="3" fill="#5c211b" />
+			<rect x="4" y="2" width="8" height="66" fill="#f4f1e4" opacity="0.2" />
 		</g>
-	</Scene>
-);
-
-const PollinateArt = ({ tone, accent, highlight }) => (
-	<Scene tone={tone}>
-		<defs>
-			<pattern id="hex" width="56" height="64" patternUnits="userSpaceOnUse">
-				<polygon
-					points="28,4 50,18 50,46 28,60 6,46 6,18"
-					fill="none"
-					stroke={accent}
-					strokeOpacity="0.18"
-				/>
-			</pattern>
-		</defs>
-		<rect width="800" height="500" fill="url(#hex)" />
-		<g transform="translate(400,230)">
-			<rect x="-120" y="50" width="240" height="160" rx="18" fill="#d9c9a0" />
-			<rect x="-96" y="86" width="118" height="90" rx="10" fill="#3d4a42" />
-			<rect x="-86" y="96" width="98" height="54" rx="6" fill={highlight} opacity="0.35" />
-			<rect x="36" y="108" width="60" height="68" rx="8" fill="#2a332c" />
-			<circle cx="66" cy="142" r="10" fill={accent} />
-			<g transform="translate(0,-16) scale(1.25)">
-				<ellipse cx="-42" cy="-32" rx="32" ry="18" fill="#f4f1e4" opacity="0.9" />
-				<ellipse cx="42" cy="-32" rx="32" ry="18" fill="#f4f1e4" opacity="0.9" />
-				<ellipse cx="0" cy="0" rx="48" ry="34" fill={highlight} />
-				<rect x="-34" y="-20" width="20" height="40" rx="7" fill="#1a1a14" />
-				<rect x="14" y="-20" width="20" height="40" rx="7" fill="#1a1a14" />
-				<circle cx="-18" cy="-6" r="6" fill="#1a1a14" />
-				<circle cx="18" cy="-6" r="6" fill="#1a1a14" />
-				<line x1="-12" y1="-32" x2="-26" y2="-60" stroke="#1a1a14" strokeWidth="3.5" />
-				<line x1="12" y1="-32" x2="26" y2="-60" stroke="#1a1a14" strokeWidth="3.5" />
-				<circle cx="-26" cy="-62" r="5" fill="#1a1a14" />
-				<circle cx="26" cy="-62" r="5" fill="#1a1a14" />
-			</g>
+		<g transform="translate(290,300)">
+			<rect x="96" y="8" width="28" height="118" rx="4" fill="#7a2e24" />
+			<path d="M0 18 C 70 8, 70 8, 96 18 L 96 126 C 70 114, 70 114, 0 126 Z" fill="url(#fbc-page)" />
+			<path d="M124 18 C 150 8, 150 8, 220 18 L 220 126 C 150 114, 150 114, 124 126 Z" fill="url(#fbc-page)" />
+			<line x1="24" y1="40" x2="80" y2="36" stroke={tone} strokeOpacity="0.28" strokeWidth="3" />
+			<line x1="22" y1="56" x2="82" y2="52" stroke={tone} strokeOpacity="0.22" strokeWidth="3" />
+			<line x1="26" y1="72" x2="78" y2="68" stroke={tone} strokeOpacity="0.2" strokeWidth="3" />
+			<line x1="140" y1="36" x2="200" y2="40" stroke={tone} strokeOpacity="0.28" strokeWidth="3" />
+			<line x1="138" y1="52" x2="202" y2="56" stroke={tone} strokeOpacity="0.22" strokeWidth="3" />
+			<line x1="142" y1="68" x2="196" y2="72" stroke={tone} strokeOpacity="0.2" strokeWidth="3" />
 		</g>
+		<rect x="250" y="446" width="300" height="6" rx="3" fill={highlight} opacity="0.7" />
 	</Scene>
 );
 
@@ -206,44 +201,6 @@ const FantasyArt = ({ tone, accent, highlight }) => (
 	</Scene>
 );
 
-const TaxiArt = ({ tone, accent, highlight }) => (
-	<Scene tone={tone}>
-		<defs>
-			<linearGradient id="tx-sky" x1="0" y1="0" x2="1" y2="1">
-				<stop offset="0%" stopColor={highlight} />
-				<stop offset="55%" stopColor="#4a6a70" />
-				<stop offset="100%" stopColor="#e8a060" />
-			</linearGradient>
-			<linearGradient id="tx-floor" x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stopColor="#3a2222" />
-				<stop offset="100%" stopColor="#1a1010" />
-			</linearGradient>
-		</defs>
-		<rect x="160" y="40" width="480" height="300" fill="#1a1210" />
-		<rect x="200" y="70" width="400" height="250" fill="url(#tx-sky)" />
-		<rect x="230" y="160" width="28" height="160" fill="#1a2428" opacity="0.45" />
-		<rect x="290" y="130" width="36" height="190" fill="#1a2428" opacity="0.35" />
-		<rect x="520" y="140" width="32" height="180" fill="#1a2428" opacity="0.4" />
-		<rect y="340" width="800" height="160" fill="url(#tx-floor)" />
-		<ellipse cx="400" cy="400" rx="220" ry="28" fill={highlight} opacity="0.15" />
-		<g transform="translate(250,250)">
-			<rect x="20" y="70" width="260" height="70" rx="16" fill={accent} />
-			<path d="M70 70 L110 18 H230 L280 70 Z" fill={accent} />
-			<rect x="118" y="28" width="96" height="42" rx="6" fill="#1a2428" opacity="0.55" />
-			<circle cx="80" cy="142" r="28" fill="#1a1010" />
-			<circle cx="80" cy="142" r="12" fill="#6a5a4a" />
-			<circle cx="230" cy="142" r="28" fill="#1a1010" />
-			<circle cx="230" cy="142" r="12" fill="#6a5a4a" />
-			<rect x="28" y="86" width="18" height="12" rx="3" fill="#f4f1e4" />
-			<rect x="256" y="86" width="18" height="12" rx="3" fill="#f4f1e4" />
-			<rect x="148" y="4" width="28" height="16" rx="4" fill="#f4f1e4" />
-			<text x="150" y="112" fill="#1a1010" fontSize="22" fontWeight="700" fontFamily="system-ui">
-				TAXI
-			</text>
-		</g>
-	</Scene>
-);
-
 const GenericArt = ({ title, tone, accent, highlight }) => (
 	<Scene tone={tone}>
 		<circle cx="400" cy="250" r="160" fill={accent} opacity="0.15" />
@@ -263,12 +220,10 @@ const GenericArt = ({ title, tone, accent, highlight }) => (
 );
 
 const ART = {
+	"family-book-club": FamilyBookClubArt,
 	"football-fantasy-manager": FantasyArt,
-	"uwm-flashcard": FlashcardArt,
-	pollinate: PollinateArt,
 	buffbud: BuffbudArt,
 	"slime-slayer": SlimeSlayerArt,
-	"crazy-taxi": TaxiArt,
 };
 
 const ProjectArt = ({ project }) => {
